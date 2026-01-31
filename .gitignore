@@ -1,0 +1,10 @@
+# MkDocs: byggd output
+site/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Systemfiler
+Thumbs.db
+.DS_Store
