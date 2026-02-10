@@ -182,7 +182,7 @@ print(round(tal,2))
 ```
 
 
-## Uppgift 1
+## Inlämning 1
 Du ska skriva ett program och lämna in via classroom. Du ska lämna in en fil som heter main.py. Överst i filen ska du skriva följande info:
 
 ```py
