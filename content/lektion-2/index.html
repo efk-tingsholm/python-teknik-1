@@ -1,0 +1,928 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../lektion-1/">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Lektion 2 - Python Teknik 1</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../styles/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lektion-2" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Python Teknik 1" class="md-header__button md-logo" aria-label="Python Teknik 1" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Python Teknik 1
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lektion 2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Python Teknik 1" class="md-nav__button md-logo" aria-label="Python Teknik 1" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Python Teknik 1
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Start
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lektion-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lektion 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Lektion 2
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lektion 2
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#jamforelser" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jämförelser
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Jämförelser">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lika-med" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lika med, ==
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inte-lika-med" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inte lika med, !=
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storremindre-an-och" class="md-nav__link">
+    <span class="md-ellipsis">
+      Större/mindre än, &lt; och &gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eller-lika-med-och" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eller lika med, &gt;= och &lt;=
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#if-satser" class="md-nav__link">
+    <span class="md-ellipsis">
+      If-satser
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="If-satser">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#if" class="md-nav__link">
+    <span class="md-ellipsis">
+      if
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#else" class="md-nav__link">
+    <span class="md-ellipsis">
+      else
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elif" class="md-nav__link">
+    <span class="md-ellipsis">
+      elif
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fler-villkor-i-samma-if" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fler villkor i samma if
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fler villkor i samma if">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#or" class="md-nav__link">
+    <span class="md-ellipsis">
+      or
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#and" class="md-nav__link">
+    <span class="md-ellipsis">
+      and
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nastlade-if-satser" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nästlade if-satser
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inlamning-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inlämning 2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Inlämning 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#testkorning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testkörning
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#jamforelser" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jämförelser
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Jämförelser">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lika-med" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lika med, ==
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inte-lika-med" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inte lika med, !=
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storremindre-an-och" class="md-nav__link">
+    <span class="md-ellipsis">
+      Större/mindre än, &lt; och &gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eller-lika-med-och" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eller lika med, &gt;= och &lt;=
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#if-satser" class="md-nav__link">
+    <span class="md-ellipsis">
+      If-satser
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="If-satser">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#if" class="md-nav__link">
+    <span class="md-ellipsis">
+      if
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#else" class="md-nav__link">
+    <span class="md-ellipsis">
+      else
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elif" class="md-nav__link">
+    <span class="md-ellipsis">
+      elif
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fler-villkor-i-samma-if" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fler villkor i samma if
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fler villkor i samma if">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#or" class="md-nav__link">
+    <span class="md-ellipsis">
+      or
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#and" class="md-nav__link">
+    <span class="md-ellipsis">
+      and
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nastlade-if-satser" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nästlade if-satser
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inlamning-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inlämning 2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Inlämning 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#testkorning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testkörning
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="lektion-2">Lektion 2<a class="headerlink" href="#lektion-2" title="Permanent link">&para;</a></h1>
+<p>Program behöver kunna "välja" olika saker beroende på situation, selektion. Detta sker genom att man i källkoden använder jämförelseoperatorer som jämför olika variabler och värden med varandra.</p>
+<h2 id="jamforelser">Jämförelser<a class="headerlink" href="#jamforelser" title="Permanent link">&para;</a></h2>
+<p>Jämförelser ger värdet <code>True</code> eller <code>False</code>. Datatypen kallas <strong>bool</strong> (boolean).</p>
+<h3 id="lika-med">Lika med, ==<a class="headerlink" href="#lika-med" title="Permanent link">&para;</a></h3>
+<p>Utvärderar om två värden är likadana, notera att man har dubbla likhetstecken.</p>
+<div class="highlight"><pre><span></span><code><span class="n">ålder</span> <span class="o">=</span> <span class="mi">16</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ålder</span> <span class="o">==</span> <span class="mi">18</span><span class="p">)</span>
+<span class="c1"># False</span>
+</code></pre></div>
+<p>Det går också att spara "svaret" från en jämförelse i en variabel. Och det går också bra att jämföra strängar med text istället för tal.
+<div class="highlight"><pre><span></span><code><span class="n">namn</span> <span class="o">=</span> <span class="s2">&quot;Eva&quot;</span>
+
+<span class="c1"># Spara &quot;svaret&quot; från jämförelsen i en variabel </span>
+<span class="n">ärEmil</span> <span class="o">=</span> <span class="n">namn</span> <span class="o">==</span> <span class="s2">&quot;Emil&quot;</span>
+
+<span class="c1"># Variabeln kan sen skrivas ut eller användas till annat</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ärEmil</span><span class="p">)</span>
+<span class="c1"># False</span>
+</code></pre></div></p>
+<h3 id="inte-lika-med">Inte lika med, !=<a class="headerlink" href="#inte-lika-med" title="Permanent link">&para;</a></h3>
+<p>Utvärderar om två värden är olika, och returnerar då sant.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="mi">5</span> <span class="o">!=</span> <span class="mi">9</span><span class="p">)</span>
+<span class="c1"># True</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">12</span> <span class="o">!=</span> <span class="n">x</span><span class="p">)</span>
+<span class="c1"># False</span>
+</code></pre></div>
+<h3 id="storremindre-an-och">Större/mindre än, &lt; och &gt;<a class="headerlink" href="#storremindre-an-och" title="Permanent link">&para;</a></h3>
+<p>Utvärderar om det första värdet är större/mindre än det andra.
+<div class="highlight"><pre><span></span><code><span class="n">temp</span> <span class="o">=</span> <span class="o">-</span><span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">temp</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
+<span class="c1"># True</span>
+
+<span class="n">speed</span> <span class="o">=</span> <span class="mi">70</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">speed</span> <span class="o">&gt;</span> <span class="mi">90</span><span class="p">)</span>
+<span class="c1"># False</span>
+</code></pre></div></p>
+<h3 id="eller-lika-med-och">Eller lika med, &gt;= och &lt;=<a class="headerlink" href="#eller-lika-med-och" title="Permanent link">&para;</a></h3>
+<p>Utvärderar om det första värdet är större/mindre eller lika med det andra.
+<div class="highlight"><pre><span></span><code><span class="n">poäng</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">poäng</span> <span class="o">&gt;=</span> <span class="mi">50</span><span class="p">)</span>
+<span class="c1"># True</span>
+
+<span class="n">temp</span> <span class="o">=</span> <span class="mi">60</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">temp</span> <span class="o">&lt;=</span> <span class="mi">60</span><span class="p">)</span>
+<span class="c1"># True</span>
+</code></pre></div></p>
+<div class="admonition warning">
+<p class="admonition-title">Tilldelning och jämförelse</p>
+<ul>
+<li><code>=</code> är tilldelning, <code>x = 5</code> betyder “spara 5 i x”.</li>
+<li><code>==</code> är jämförelse, <code>x == 5</code> betyder “är x lika med 5?”</li>
+</ul>
+</div>
+<h2 id="if-satser">If-satser<a class="headerlink" href="#if-satser" title="Permanent link">&para;</a></h2>
+<h3 id="if">if<a class="headerlink" href="#if" title="Permanent link">&para;</a></h3>
+<p>Köra kod baserat på utfallet av en jämförelse.</p>
+<p>En if-sats ser strukturellt ut enligt följande:
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">villkor</span><span class="p">:</span>
+    <span class="n">kod</span> <span class="n">som</span> <span class="n">ska</span> <span class="n">köras</span> <span class="n">om</span> <span class="n">sant</span>
+</code></pre></div>
+Notera att både kolon efter jämförelsen och att koden som kommer efteråt är indenterad, intabbad, är viktigt.</p>
+<p>Nedan följer ett mer fungerande exempel där användaren får skriva in ett tal.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Låt användaren skriva in en temperatur, spara i variabel temp</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Temperatur: &quot;</span><span class="p">))</span>
+
+<span class="c1"># kolla OM värdet i temp är under noll, i så fall skriv ut att det är kallt</span>
+<span class="k">if</span> <span class="n">temp</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Det är kallt!&quot;</span><span class="p">)</span>
+
+<span class="c1"># Skriv alltid ut det här i slutet.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Klart.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Kolon och indentering är obligatoriskt</p>
+<p>I Python måste du ha <code>:</code> efter villkoret och indenterad kod på raden/raderna under, annars får du fel och programmet kan inte köras eller fungerar inte som det ska.</p>
+</div>
+<h3 id="else">else<a class="headerlink" href="#else" title="Permanent link">&para;</a></h3>
+<p>Man kan kombinera en if med else, och då få ett alternativ för vad som ska hända om jämförelsen inte är sann. Notera att else måste ligga efter en if-sats, det går inte att använda else för sig själv.</p>
+<p>Vi fortsätter med samma temperaturexempel som ovan, men nu med en else, här kan BARA ETT av alternativen hända. Antingen är det minusgrader, eller så är det noll/varmare.
+<div class="highlight"><pre><span></span><code><span class="n">temp</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Temperatur: &quot;</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">temp</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Minusgrader&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Noll eller varmare&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<h3 id="elif">elif<a class="headerlink" href="#elif" title="Permanent link">&para;</a></h3>
+<p>Det går att kombinera flera villkor för att kunna nå fler än två olika utfall. Detta görs genom att kombinera if med elif, som står för "else if". Här är det viktigt att if-måste vara först, det går inte att använda elif utan if. Om man vill använda else måste else även här vara sist.</p>
+<p>Temperaturexemplet fortsätter. Här finns det fyra olika alternativ som kan ske baserat på vad användaren skriver in, men bara ETT av alternativen kan hända. </p>
+<div class="highlight"><pre><span></span><code><span class="n">temp</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Temperatur: &quot;</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">temp</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Kallt&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">temp</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Svalt&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">temp</span> <span class="o">&lt;</span> <span class="mi">30</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Lagom&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Varmt&quot;</span><span class="p">)</span>
+</code></pre></div>
+<blockquote>
+<p>Koden körs uppifrån och ned, så först undersöks första villkoret, sen andra, sen tredje och om inget av de stämmer så infaller else</p>
+</blockquote>
+<h2 id="fler-villkor-i-samma-if">Fler villkor i samma if<a class="headerlink" href="#fler-villkor-i-samma-if" title="Permanent link">&para;</a></h2>
+<p>Det kan ibland vara relevant att undersöka om ett angivet värde är inom ett tillåtet intervall, kanske att den inskrivna temperaturen inte får vara orimligt låg eller hög. Det går såklart att uppnå med hjälp av elif, men det går också att kombinera fler villkor i en if-sats.</p>
+<h3 id="or">or<a class="headerlink" href="#or" title="Permanent link">&para;</a></h3>
+<p>Här används or för att kombinera två villkor, om temp är mindre än -50 grader, ELLER högre än 60, skriv ut att det är orimligt.</p>
+<div class="highlight"><pre><span></span><code><span class="n">temp</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Temperatur: &quot;</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">temp</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">50</span> <span class="ow">or</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mi">60</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Orimligt mätvärde&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mätvärdet verkar rimligt&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="and">and<a class="headerlink" href="#and" title="Permanent link">&para;</a></h3>
+<p>Det går också att vända på det, och skriva en if-sats som undersöker om värdet Är i rätt intervall, d.v.s. mellan -50 OCH 60. Detta uppnås med nyckelordet and.</p>
+<div class="highlight"><pre><span></span><code><span class="n">temp</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Temperatur: &quot;</span><span class="p">))</span>
+
+<span class="c1"># Skillnad, utvärderar om mätvärdet är INOM intervallet istället </span>
+<span class="c1"># för utanför jfr med förra exemplet.</span>
+<span class="k">if</span> <span class="n">temp</span> <span class="o">&gt;=</span> <span class="o">-</span><span class="mi">50</span> <span class="ow">and</span> <span class="n">temp</span> <span class="o">&lt;=</span> <span class="mi">60</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mätvärdet verkar rimligt&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Orimligt mätvärde&quot;</span><span class="p">)</span>
+</code></pre></div>
+<details class="info">
+<summary>Kortare villkor (och <code>not</code>)</summary>
+<p><strong>1) Kedjade jämförelser (kortare än <code>and</code>)</strong><br />
+Om du vill kolla att ett värde ligger i ett intervall kan du skriva så här:
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="o">-</span><span class="mi">50</span> <span class="o">&lt;=</span> <span class="n">temp</span> <span class="o">&lt;=</span> <span class="mi">60</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rimligt&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Orimligt&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>2) <code>not</code> (vänder på ett villkor)</strong><br />
+<code>not</code> betyder “inte”. Det gör ett sant villkor falskt, och tvärtom.
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="o">-</span><span class="mi">50</span> <span class="o">&lt;=</span> <span class="n">temp</span> <span class="o">&lt;=</span> <span class="mi">60</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Orimligt&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rimligt&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+</details>
+<h2 id="nastlade-if-satser">Nästlade if-satser<a class="headerlink" href="#nastlade-if-satser" title="Permanent link">&para;</a></h2>
+<p>Man kan ha if-satser inuti andra if-satser. Det kan vara vettigt exempelvis om man vill göra en rimlighetskontroll först, och först om den är ok gå vidare till den jämförelse man faktiskt vill göra.</p>
+<p>Temperaturexemplet fortsätter. Nu kontrollerar vi först om det inskrivna värdet är rimligt, sen OM det är rimligt går vi vidare till att utvärdera om det är kallt eller lagom eller nåt. Om det inte är rimligt vill man ju inte lägga mer tid och energi på det.</p>
+<div class="highlight"><pre><span></span><code><span class="n">temp</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Temperatur (°C): &quot;</span><span class="p">))</span>
+
+<span class="c1"># Undersök om det är rimligt med den &quot;yttre&quot; if-satsen</span>
+<span class="k">if</span> <span class="n">temp</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">50</span> <span class="ow">or</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mi">60</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Orimligt mätvärde&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c1"># Om det blir &quot;else&quot;, så vet vi att temperaturen är rimlig.</span>
+    <span class="c1"># Här inne skrivs vår andra if-sats.</span>
+    <span class="k">if</span> <span class="n">temp</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Kallt&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">temp</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Svalt&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">temp</span> <span class="o">&lt;</span> <span class="mi">30</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Lagom&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Varmt&quot;</span><span class="p">)</span>
+</code></pre></div>
+<blockquote>
+<p>Tänk på den yttre if-satsen som säkerhetskontroll och den inre if-satsen som själva jobbet som ska utföras.</p>
+</blockquote>
+<h2 id="inlamning-2">Inlämning 2<a class="headerlink" href="#inlamning-2" title="Permanent link">&para;</a></h2>
+<p>Du ska skriva ett program och lämna in via classroom. Du ska lämna in en fil som heter main.py. Överst i filen ska du skriva följande info:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Namn: XXXX YYYY</span>
+<span class="c1"># Klass: NATE25</span>
+</code></pre></div>
+<p>Ditt program ska:</p>
+<ul>
+<li>Fråga efter din hastighet i km/h.</li>
+<li>Utföra en rimlighetskontroll, hastigheten måste vara större än 0 och mindre än 300 km/h.</li>
+<li>
+<p>Beräkna bromssträckan enligt formel: (Notera att formeln kräver m/s som enhet)</p>
+<div class="arithmatex">\[
+s = \frac{v^2}{2 \mu g}
+\]</div>
+<p><span class="arithmatex">\(s\)</span> – sträcka (m)<br>
+<span class="arithmatex">\(v\)</span> – hastighet (m/s)<br>
+<span class="arithmatex">\(\mu\)</span> – friktionskoefficient (–) <em>Denna kan antas till 0.8 i uppgiften</em> <br>
+<span class="arithmatex">\(g\)</span> – tyngdacceleration (m/s<span class="arithmatex">\(^2\)</span>) </p>
+</li>
+</ul>
+<!-- Ett litet avstånd för att göra skilland på formel och resten av punktlistan -->
+<div style="margin-top: 1rem;"></div>
+
+<ul>
+<li>Skriva ut ett meddelande som innehåller:<ul>
+<li>Bromssträckan (avrundad till 1 decimal den här gången).</li>
+<li>Ett utlåtande om sträckan är kort/medel/lång, under 10 m för kort, under 30 m för medel, resten lång.</li>
+</ul>
+</li>
+</ul>
+<p>Stilkrav:</p>
+<ul>
+<li>Använd beskrivande variabelnamn, t.ex. fart_kmh och fart_ms.</li>
+<li>Ha minst en beskrivande kommentar som delar upp/förtydligar vad som händer, exempelvis # Rimlighetskontroll
+    <div class="highlight"><pre><span></span><code># Rimlighetskontroll
+all din kod som gör rimlighetskontroll
+</code></pre></div></li>
+</ul>
+<h3 id="testkorning">Testkörning<a class="headerlink" href="#testkorning" title="Permanent link">&para;</a></h3>
+<p>Såhär skulle det kunna se ut när man kör programmet:
+<div class="highlight"><pre><span></span><code>Vad är din hastighet? Svara i km/h: &gt; 50
+Din bromssträcka är 12.3 m (medel).
+</code></pre></div></p>
+<blockquote>
+<p>Din text kan självklart vara annorlunda.</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
