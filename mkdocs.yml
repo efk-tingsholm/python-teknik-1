@@ -1,7 +1,44 @@
 site_name: Python Teknik 1
+copyright: © 2026 Emil Frisk
 
 theme:
   name: material
+  language: sv
+
+  # Features
+  features:
+    - navigation.top
+    - navigation.footer
+    # - header.autohide
+    # - search.suggest
+    - search.highlight
+
+  # Ikoner
+  icon:
+    logo: material/console
+    # favicon: måste va en bild som ligger i docs i projektet tror jag
+    menu: material/console
+    previous: fontawesome/solid/angle-left
+    next: fontawesome/solid/angle-right
+
+  # Färger
+  # red, pink, purple, deep purple, indigo, blue, light blue, cyan, teal, green, light green, lime, yellow, amber, orange, deep orange, brown, grey, blue grey, black, white
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+
+
+
   
 nav:
   - Start: index.md
@@ -57,3 +94,8 @@ extra_javascript:
   - javascripts/mathjax.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
+
+extra:
+  social:
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:emil.frisk@ulricehamn.se
