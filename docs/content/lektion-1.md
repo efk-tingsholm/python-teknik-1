@@ -9,12 +9,16 @@ Under installationen, välj add to PATH. I övrigt acceptera allt. :)
 
 ![Till path](images/py-till-path.png)
 
-När du är färdig kan du kontrollera att allt gått bra genom att öppna Kommandotolken/Terminal/Powershell på din dator och skriva:
+### Kontrollera installation
 
-```bash
-python --version
-# Python 3.14.0
-```
+När du är färdig kan du kontrollera att allt gått bra genom att öppna Kommandotolken/Terminal/Powershell på din dator och skriva "python --version".
+
+Öppna kommandotolken. På er dator heter den nog "Terminal".
+![Öppna cmd](images/cmd-open.png)
+> Jag har tagit bilden på en dator med windows 10, ni har 11, därför ser det lite annorlunda ut.
+
+Kolla versionen genom att skriva "python --version".
+![Kolla version](images/cmd-pycheck2.png)
 > Det här kan du också göra om du redan har python installerat för att kolla vilken version du har.
 
 ??? warning "Om `python --version` inte funkar"
