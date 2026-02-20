@@ -11,13 +11,14 @@ Under installationen, välj add to PATH. I övrigt acceptera allt. :)
 
 ### Kontrollera installation
 
-När du är färdig kan du kontrollera att allt gått bra genom att öppna Kommandotolken/Terminal/Powershell på din dator och skriva "python --version".
+När du är färdig kan du kontrollera att allt gått bra genom att öppna Kommandotolken/Terminal/Powershell på din dator och skriva "python --version", följt av enter.
 
 Öppna kommandotolken. På er dator heter den nog "Terminal".
 ![Öppna cmd](images/cmd-open.png)
 > Jag har tagit bilden på en dator med windows 10, ni har 11, därför ser det lite annorlunda ut.
 
-Kolla versionen genom att skriva "python --version".
+Kolla versionen genom att skriva "python --version" och sen trycka enter, då ska det gå att läsa din version av python i konsolfönstret.
+
 ![Kolla version](images/cmd-pycheck2.png)
 > Det här kan du också göra om du redan har python installerat för att kolla vilken version du har.
 
@@ -34,19 +35,42 @@ Gå till https://code.visualstudio.com/ och tryck på den stora feta knappen "Do
 Under installationen lägg till funktion för högerklick. Notera, här kan du också markera "desktop icon" om du vill ha en ikon på skrivbordet för att starta programmet.
 ![vscode context](images/vscode-context.png)
 
-När du är färdig och programmet är igång möts du av nån slags "komma igång" guide och en ruta där de vill att du ska använda deras AI. Dessa kan med fördel stängas ned.
+
+## Öppna VS Code
+När du är färdig med installationen kan det vara så att VS Code startas automatiskt. 
+
+Om det inte gör det, starta programmet genom att antingen klicka på ikonen på skrivbordet om du har sådan, eller söka på "Visual Studio Code" i din startmeny. 
+
+När programmet är igång möts du av nån slags "komma igång" guide och en ruta där de vill att du ska använda deras AI. Dessa kan med fördel stängas ned.
 ![vscode startup](images/vscode-startup.png)
 
 Vilket resulterar i följande vy. Glorious.
 ![vscode clean](images/vscode-clean.png)
 
-## Öppna mapp i VS Code
-Mitt förslag är att göra en mapp någonstans på datorn som heter t.ex. "Python Teknik 1", inne i den gör vi sen en ny undermapp för varje lektion, "lektion-1", "lektion-2" osv.
 
+Ett bra sätt att arbeta med VS Code är att öppna en mapp från datorn som man vill arbeta i, mitt förslag är att göra en mapp någonstans på datorn som heter t.ex. "Python Teknik 1", inne i den gör vi sen en ny undermapp för varje lektion, "lektion-1", "lektion-2" osv.
+
+### Göra ny mapp
+För att göra en ny mapp högerklickar man, väljer "Nytt" och sen "Mapp". Det kan göras på skrivbordet, eller inne i en annan mapp. Efter att du högerklickat får du ge mappen ett namn, och sen trycka enter.
+
+![Ny mapp skrivbord](images/new-folder-desktop.png)
+
+Det går också bra att göra mappar inne i andra mappar, samma metodik, högerklicka --> Nytt --> Mapp.
+![Undermapp](images/new-folder-folder.png)
+
+
+### Öppna mappen i VS Code
 Det finns olika sätt att öppna mappar i VS Code. Jag demonstrerar här att högerklicka på mappen och välja "Öppna i VSCode".
 ![vscode open folder](images/vscode-rightclick-folder.png)
 
+
+I windows 11 ser menyn lite annorlunda ut, men texten är samma. Högerklicka på mappen och välj "Open with Code" eller motsvarande alternativ på svenska.
+![](images/vscode-rightclick-folder-11.png)
+
+
 > Alternativt, inne i VS Code, välj File --> Open Folder --> Hitta och öppna din mapp.
+
+
 
 
 ## Lägg till fil
@@ -74,7 +98,7 @@ Personligen kör jag ofta "Material Icon Theme" för jag ser tydligare skillnad 
 ![icon theme](images/vscode-material-icon.png)
 
 ## Kolla att VS Code använder rätt python
-VS Code kan köra olika versioner av python, om du bara har en version bör det inte vara några problem, när du är i filen main.py, kontrollera att det står något i stil med python 3.x nere till höger.
+VS Code kan köra olika versioner av python, om du bara har en version bör det inte vara några problem, när du är i filen main.py, kontrollera att det står något i stil med python 3.x nere till höger i programfönstret.
 
 ![rätt interpreter](images/vscode-interpreter-1.png)
 
