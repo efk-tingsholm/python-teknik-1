@@ -251,7 +251,29 @@ Stilkrav:
 ### Testkörning
 Såhär skulle det kunna se ut när man kör programmet:
 ```
-Vad är din hastighet? Svara i km/h: > 50
+Vad är din hastighet? Svara i km/h: 25
+Din bromssträcka är 3.1 m (kort).
+```
+
+```
+Vad är din hastighet? Svara i km/h: 50
 Din bromssträcka är 12.3 m (medel).
 ```
+
+```
+Vad är din hastighet? Svara i km/h: 250
+Din bromssträcka är 306.9 m (lång).
+```
+
+```
+Vad är din hastighet? Svara i km/h: -20
+Orimlig hastighet. Ange ett värde mellan 0 och 300 km/h.
+```
+
+```
+Vad är din hastighet? Svara i km/h: 400
+Orimlig hastighet. Ange ett värde mellan 0 och 300 km/h.
+```
+
+
 > Din text kan självklart vara annorlunda.
