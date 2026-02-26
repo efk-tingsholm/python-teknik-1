@@ -210,7 +210,14 @@ else:
 > Tänk på den yttre if-satsen som säkerhetskontroll och den inre if-satsen som själva jobbet som ska utföras.
 
 ## Inlämning 2
-Du ska skriva ett program och lämna in via classroom. Du ska lämna in en fil som heter main.py. Överst i filen ska du skriva följande info:
+
+!!! warning "Nytt filnamn"
+    Från och med inlämning 2 ska er inlämnade fil heta `förnamn_efternamn_inl_2.py`, istället för main.py. 
+
+    Så för inlämningen, gör en ny fil i VS Code, namnge den enligt ovanstående, och skriv sen inlämningens källkod i den.
+
+
+Du ska skriva ett program och lämna in via classroom. Du ska lämna in en fil som heter `förnamn_efternamn_inl_2.py`. Överst i filen ska du skriva följande info:
 
 ```py
 # Namn: XXXX YYYY
