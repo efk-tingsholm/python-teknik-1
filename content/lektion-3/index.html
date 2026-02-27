@@ -421,6 +421,42 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#gangertabellen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gångertabellen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#snygg-tabell-med-f-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      Snygg tabell med f-string
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summan-av-tal-mellan-a-och-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summan av tal mellan a och b
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kora-igen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Köra igen?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#inlamning-3" class="md-nav__link">
     <span class="md-ellipsis">
       Inlämning 3
@@ -554,6 +590,42 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#gangertabellen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gångertabellen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#snygg-tabell-med-f-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      Snygg tabell med f-string
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summan-av-tal-mellan-a-och-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summan av tal mellan a och b
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kora-igen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Köra igen?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#inlamning-3" class="md-nav__link">
     <span class="md-ellipsis">
       Inlämning 3
@@ -632,14 +704,14 @@ Exemplet ovan ger följande utskrift:
 5
 Loopen har avslutats
 </code></pre></div></p>
-<hr />
 <h3 id="utskrift-pa-en-rad">Utskrift på en rad<a class="headerlink" href="#utskrift-pa-en-rad" title="Permanent link">&para;</a></h3>
-<p>Följande exempel skriver ut alla jämna positiva heltal mindre än 10, på en rad, skiljda av mellanslag. Detta genom att lägga till ett argument <code>end</code> i funktionen <code>print()</code>.</p>
+<p>Följande exempel skriver ut alla jämna positiva heltal mindre än 10, på en rad, skiljda av mellanslag. </p>
+<p>För att få utskriften på en rad och med mellanslag mellan används argumentet <code>end</code> i funktionen <code>print()</code>.</p>
 <p>Exemplet använder också en förkortad version för att öka värdet på variabeln tal med 2. Användning av förkortad version är helt frivilligt.
 <div class="highlight"><pre><span></span><code><span class="n">tal</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="k">while</span> <span class="n">tal</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">tal</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
-    <span class="n">tal</span> <span class="o">+=</span> <span class="mi">2</span>  <span class="c1"># Förkortad version av tal = tal + 2</span>
+    <span class="n">tal</span> <span class="o">+=</span> <span class="mi">2</span>  <span class="c1"># Förkortad version av: tal = tal + 2</span>
 </code></pre></div>
 Exemplet ovan ger följande utskrift:
 <div class="highlight"><pre><span></span><code>2 4 6 8
@@ -654,7 +726,7 @@ Exemplet ovan ger följande utskrift:
 <h2 id="for">For<a class="headerlink" href="#for" title="Permanent link">&para;</a></h2>
 <p>For-loopar upprepar sitt innehåll ett visst antal gånger, och är därmed bra att använda när man vill upprepa något ett specifikt antal gånger, "köra loopen ett visst antal varv". </p>
 <p>For-loopen börjar med ordet <code>for</code>, följt av ett variabelnamn, ofta används <code>i</code>. Variabeln fungerar som en räknare, och kommer att få olika värde varje varv i loopen, ofta +1. Därefter kommer nyckelordet <code>in</code>, följt av information om vilka värden variabeln i ska ha under loopens varv.</p>
-<p>Det sistnämnda uppnås med hjälp av funktionen <code>range()</code>. </p>
+<p>Det sistnämnda kan uppnås med hjälp av funktionen <code>range()</code>. </p>
 <h3 id="rangestopp">range(stopp)<a class="headerlink" href="#rangestopp" title="Permanent link">&para;</a></h3>
 <p>Funktionen <code>range()</code> kan anropas med ett argument, som då fungerar som övre gräns, eller "antal varv" i loopen.</p>
 <p><div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
@@ -691,6 +763,167 @@ Exemplet ovan ger följande utskrift. Notera att loopen går 6 varv, skriver ut 
 <blockquote>
 <p>Utskrift: 15 12 9 6</p>
 </blockquote>
+<h2 id="gangertabellen">Gångertabellen<a class="headerlink" href="#gangertabellen" title="Permanent link">&para;</a></h2>
+<p>Loopar kan användas för att skriva ut tabeller av olika slag, exempelvis en gångertabell. Det går bra att använda antingen while eller for såklart. I exemplet nedan används en for-loop, och räknevariabeln <code>i</code> utnyttjas.</p>
+<p>Nedanstående exempel skriver ut gångertabellen för talet 8. Det går självklart också bra att ta in ett tal från användaren med <code>input()</code>, men det gör vi inte här. </p>
+<p><div class="highlight"><pre><span></span><code><span class="n">tal</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">tal</span><span class="p">):</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;*&quot;</span><span class="p">,</span> <span class="n">tal</span><span class="p">,</span> <span class="s2">&quot;=&quot;</span><span class="p">,</span> <span class="n">i</span> <span class="o">*</span> <span class="n">tal</span><span class="p">)</span> 
+</code></pre></div>
+Ger följande utskrift, notera att 0 * 8 = 0 är med, men inte 8 * 8 = 64.
+<div class="highlight"><pre><span></span><code>0 * 8 = 0
+1 * 8 = 8
+2 * 8 = 16
+3 * 8 = 24
+4 * 8 = 32
+5 * 8 = 40
+6 * 8 = 48
+7 * 8 = 56
+</code></pre></div></p>
+<p>Om man föredrar att ha med 64 och inte 0, så kan man ändra i funktionen <code>range()</code>.
+<div class="highlight"><pre><span></span><code><span class="n">tal</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">tal</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span> <span class="c1"># Blir alltså range(1, 9), och då får vi med 8.</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;*&quot;</span><span class="p">,</span> <span class="n">tal</span><span class="p">,</span> <span class="s2">&quot;=&quot;</span><span class="p">,</span> <span class="n">i</span> <span class="o">*</span> <span class="n">tal</span><span class="p">)</span> 
+</code></pre></div></p>
+<blockquote>
+<p>Ger liknande utskrift som förra exemplet, men utan 0 och med 64 istället.</p>
+</blockquote>
+<p>Det är också möjligt att skriva en rubrikrad till sin tabell, före loopen börjar, se nedanstående exempel:
+<div class="highlight"><pre><span></span><code><span class="n">tal</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Variabel Tal Produkt&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--------------------&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">tal</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;*&quot;</span><span class="p">,</span> <span class="n">tal</span><span class="p">,</span> <span class="s2">&quot;=&quot;</span><span class="p">,</span> <span class="n">i</span> <span class="o">*</span> <span class="n">tal</span><span class="p">)</span> 
+</code></pre></div>
+Ger följande utskrift, nu har jag ju överdrivit, men det blev ju inte något vidare snyggt, kolumnerna och rubrikerna matchar ju inte alls!
+<div class="highlight"><pre><span></span><code>Variabel Tal Produkt
+--------------------
+1 * 8 = 8
+2 * 8 = 16
+3 * 8 = 24
+4 * 8 = 32
+5 * 8 = 40
+6 * 8 = 48
+7 * 8 = 56
+8 * 8 = 64
+</code></pre></div></p>
+<h2 id="snygg-tabell-med-f-string">Snygg tabell med f-string<a class="headerlink" href="#snygg-tabell-med-f-string" title="Permanent link">&para;</a></h2>
+<p>I Python kan man formatera sina strängar med något som kallas f-sträng, eller formatsträngar. Med dem kan man bland annat uppnå snygga tabeller.</p>
+<p>Utöver det blir det också lättare att skriva text med variabler i, för f-strängar låter oss skriva variabler mitt i texten utan kommatecken, så det blir lättare att läsa vad det ska stå.</p>
+<p>Man gör en f-sträng genom att skriva bokstaven <code>f</code> framför textsträngen, alltså framför citattecknet. Sen kan man med hjälp av klammerparenteser <code>{...}</code> skriva in variabler var som helst inne i strängen.
+<div class="highlight"><pre><span></span><code><span class="n">tal</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Min variabel tal har värdet </span><span class="si">{</span><span class="n">tal</span><span class="si">}</span><span class="s2">, det är ett bra värde!&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<blockquote>
+<p>Ger utskriften: Min variabel tal har värdet 8, det är ett bra värde!</p>
+</blockquote>
+<p>För att snygga till en tabell kan man ange hur stor bredd varje kolumn ska ta, eller ja, varje variabel som skrivs in med f-sträng, mer specifikt. Det gör man inne i klammrarna genom att skriva kolon <code>:</code> och sen vilket format man vill ha.</p>
+<p>Exempelvis betyder <code>{tal:&gt;10}</code> att variabeln tal ska högerjusteras i en "kolumn" som är 10 tecken bred. </p>
+<p>På motsvarande sätt finns <code>:&lt;5</code> för vänsterjustering, i en kolumn med bredden 5 här i exemplet, man kan ändra siffra till önskad bredd.</p>
+<p>Beväpnade med detta tar vi oss an åttans gångertabell igen:</p>
+<div class="highlight"><pre><span></span><code><span class="n">tal</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tal Variabel Produkt&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;------------------------&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">tal</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="c1"># Nu skriver vi ut varje rad i tabellen med en f-sträng.</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">tal</span><span class="si">:</span><span class="s2">&lt;3</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">i</span><span class="si">:</span><span class="s2">^8</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">tal</span><span class="si">:</span><span class="s2">&gt;7</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<blockquote>
+<p>En bra startpunkt för kolumnbredd är att räkna antalet bokstäver i rubrik-ordet.</p>
+</blockquote>
+<p>Exemplet ger nedanstående utskrift, notera hur mittenkolumnen är centrerad!
+<div class="highlight"><pre><span></span><code>Tal   Variabel   Produkt
+------------------------
+8   *    1     =       8
+8   *    2     =      16
+8   *    3     =      24
+8   *    4     =      32
+8   *    5     =      40
+8   *    6     =      48
+8   *    7     =      56
+8   *    8     =      64
+</code></pre></div></p>
+<blockquote>
+<p>Jag tänker inte argumentera att det här var det snyggaste som finns, men både vänster och högerjustering samt centrering demonstrerades!</p>
+</blockquote>
+<h2 id="summan-av-tal-mellan-a-och-b">Summan av tal mellan a och b<a class="headerlink" href="#summan-av-tal-mellan-a-och-b" title="Permanent link">&para;</a></h2>
+<p>Ett annat klassiskt behov är att summera tal. Exempelvis alla tal mellan 5 och 15.</p>
+<p>Detta kan man göra med hjälp av en variabel utanför loopen, och sen addera till den variabeln för varje varv som loopen går.
+<div class="highlight"><pre><span></span><code><span class="c1"># Gör en variabel att spara summan i</span>
+<span class="n">summa</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># Loopa från och med 5, till 16, dvs det sista värdet i kommer vara är 15.</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">16</span><span class="p">):</span>
+    <span class="n">summa</span> <span class="o">=</span> <span class="n">summa</span> <span class="o">+</span> <span class="n">i</span>   <span class="c1"># För varje varv i loopen, addera i till variabeln</span>
+
+<span class="c1"># Efter loopen skriv ut värdet på variabeln</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Summan är </span><span class="si">{</span><span class="n">summa</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<blockquote>
+<p>Ger utskriften: Summan är 110!</p>
+</blockquote>
+<p>Detta kan utvecklas till att användaren själv kan välja vilka två tal som ska använda som start och stopp
+<div class="highlight"><pre><span></span><code><span class="c1"># Ta in start och stopp från anv, gör om till heltal med int().</span>
+<span class="n">start</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ange start: &quot;</span><span class="p">))</span>
+<span class="n">stopp</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ange stopp: &quot;</span><span class="p">))</span>
+
+<span class="c1"># Samma kod som ovanstående exempel, fast med variablerna start och stopp.</span>
+<span class="n">summa</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">stopp</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">summa</span> <span class="o">=</span> <span class="n">summa</span> <span class="o">+</span> <span class="n">i</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Summan är </span><span class="si">{</span><span class="n">summa</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<p>Man är såklart inte begränsad till summa och varje tal, man skulle också kunna tänka sig att bestämma produkten av vart trejde tal mellan 5 och 15.
+<div class="highlight"><pre><span></span><code><span class="n">produkt</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span><span class="mi">3</span><span class="p">):</span>  <span class="c1"># 5*8*11*14*17, börjar på 5, ökar med 3 varje varv.</span>
+    <span class="n">produkt</span> <span class="o">=</span> <span class="n">produkt</span> <span class="o">*</span> <span class="n">i</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Produkten är </span><span class="si">{</span><span class="n">produkt</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<blockquote>
+<p>Ger utskriften: Produkten är 104720!</p>
+</blockquote>
+<details class="info">
+<summary>Snygg utskrift av stora tal</summary>
+<p>Stora tal kan bli svåra att läsa, som syns i exemplet ovan.</p>
+<p>Med f-strängar kan du lägga in tusentalsavskiljare som gör tal mer lättlästa.</p>
+<div class="highlight"><pre><span></span><code><span class="n">n</span> <span class="o">=</span> <span class="mi">1234567890</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">n</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>                  <span class="c1"># 1,234,567,890</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">n</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">))</span> <span class="c1"># 1 234 567 890</span>
+</code></pre></div>
+</details>
+<h2 id="kora-igen">Köra igen?<a class="headerlink" href="#kora-igen" title="Permanent link">&para;</a></h2>
+<p>Ibland kan man ha behov av att kunna köra ett program flera gånger på rad, och helt enkelt fråga användaren om denne vill köra igen. Detta kan uppnås genom att man lägger hela programmet inne i en loop.</p>
+<p>Det går att uppnå på lite olika sätt, men det här är ett sätt.
+<div class="highlight"><pre><span></span><code><span class="c1"># Gör en variabel allra först, ge den ett värde</span>
+<span class="n">köra_igen</span> <span class="o">=</span> <span class="s2">&quot;j&quot;</span>
+
+<span class="c1"># Använd variabeln köra_igen för att styra när loopen körs</span>
+<span class="k">while</span> <span class="n">köra_igen</span> <span class="o">==</span> <span class="s2">&quot;j&quot;</span><span class="p">:</span>
+
+    <span class="c1"># Kör all din kod du har i programmet</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hej! Nu kör vi programmet...&quot;</span><span class="p">)</span>
+
+    <span class="c1"># När ditt program är klart, fråga om användaren vill köra igen.</span>
+    <span class="c1"># Om användaren skriver &quot;j&quot; så kommer loopen köras igen.</span>
+    <span class="n">köra_igen</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Vill du köra igen? (j/n): &quot;</span><span class="p">)</span>
+
+<span class="c1"># Annars avslutas programmet.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Programmet avslutas.&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<details class="info">
+<summary>Göra input mer förlåtande (lower och strip)</summary>
+<p>När man frågar användaren om ett svar kan det bli lite olika, stor bokstav, liten bokstav och extra mellanslag.</p>
+<p>Dessa extra användarpåhitt kan städas bort med hjälp av funktionerna <code>lower()</code> och <code>strip()</code>.</p>
+<ul>
+<li><code>.lower()</code> gör om texten till små bokstäver</li>
+<li><code>.strip()</code> tar bort mellanslag i början och slutet</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code><span class="n">köra_igen</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Vill du köra igen? (j/n): &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+</code></pre></div>
+Så även om användaren nu skriver "J", så kommer versalen att göras om till gemenen (liten bokstav) "j" och allt är frid och fröjd.</p>
+</details>
 <hr />
 <p>TODO - tankar</p>
 <p>Teori att ta upp (kanske): </p>
@@ -711,7 +944,57 @@ Exemplet ovan ger följande utskrift. Notera att loopen går 6 varv, skriver ut 
 </ul>
 <hr />
 <h2 id="inlamning-3">Inlämning 3<a class="headerlink" href="#inlamning-3" title="Permanent link">&para;</a></h2>
+<p>Du ska skriva ett program och lämna in via classroom. Du ska lämna in en fil som heter <code>förnamn_efternamn_inl_3.py</code>. Överst i filen ska du skriva följande info:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Namn: XXXX YYYY</span>
+<span class="c1"># Klass: NATE25</span>
+</code></pre></div>
+<p>Programmet handlar om att simulera en robot och robotens batteri över tid.</p>
+<p>Ditt program ska:</p>
+<ul>
+<li>Ta in ett startvärde från användaren, den nivå batteriet ska ha från början, mellan 50 och 100 %. Om värdet är otillåtet kan programmet stänga ner bara, det behöver INTE fråga igen.</li>
+<li>Programmet ska sedan simulera att robotens batteri sjunker med 7 %-enheter per timme, och skriva ut batterinivån för varje timme, som en tabell. (Tänk: en loop där varje varv motsvarar en timme.)</li>
+<li>När batterinivån är 25 % eller lägre går roboten in i batterisparläge, och drar mindre energi, 3 %-enheter per timme. Så länge som roboten är i sparläge ska ett meddelande skrivas ut i tabellen, se testkörning.</li>
+<li>När robotens batteri når noll ska tabellen avslutas med ett meddelande om att robten stängs av. Notera att robotens batterinivå inte ska bli negativ, utan stanna på noll.</li>
+</ul>
 <h3 id="testkorning">Testkörning<a class="headerlink" href="#testkorning" title="Permanent link">&para;</a></h3>
+<p>Såhär skulle det kunna se ut när man kör programmet, dina formuleringar kan självklart vara annorlunda.</p>
+<p><div class="highlight"><pre><span></span><code>Ange startnivå på batteriet (50-100): -200
+Orimligt värde. Ange ett heltal mellan 50 och 100.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Ange startnivå på batteriet (50-100): 89
+
+Tid(h)  Energi(%)  Meddelande
+-----------------------------
+0       89
+1       82
+2       75
+3       68
+4       61
+5       54
+6       47
+7       40
+8       33
+9       26
+10      19         SPARLÄGE (3 %/h)
+11      16         SPARLÄGE (3 %/h)
+12      13         SPARLÄGE (3 %/h)
+13      10         SPARLÄGE (3 %/h)
+14      7          SPARLÄGE (3 %/h)
+15      4          SPARLÄGE (3 %/h)
+16      1          SPARLÄGE (3 %/h)
+17      0          Batteriet är slut. Robot stänger av...
+</code></pre></div></p>
+<details class="info">
+<summary>Bonus: time.sleep()</summary>
+<p>Ibland kan det vara kul att låta en simulering gå lite långsammare, så man hinner följa vad som händer.
+I Python kan man pausa programmet med funktionen <code>sleep()</code> i modulen <code>time</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+
+<span class="k">for</span> <span class="n">varv</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Varv:&quot;</span><span class="p">,</span> <span class="n">varv</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>  <span class="c1"># paus i 0.5 sekunder</span>
+</code></pre></div>
+</details>
 
 
 
@@ -806,7 +1089,7 @@ Exemplet ovan ger följande utskrift. Notera att loopen går 6 varv, skriver ut 
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.footer", "search.highlight"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Kopierat till urklipp", "clipboard.copy": "Kopiera till urklipp", "search.result.more.one": "1 till p\u00e5 denna sida", "search.result.more.other": "# till p\u00e5 denna sida", "search.result.none": "Inga s\u00f6kresultat", "search.result.one": "1 s\u00f6kresultat", "search.result.other": "# s\u00f6kresultat", "search.result.placeholder": "Skriv s\u00f6kord", "search.result.term.missing": "Saknas", "select.version": "V\u00e4lj version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.footer", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Kopierat till urklipp", "clipboard.copy": "Kopiera till urklipp", "search.result.more.one": "1 till p\u00e5 denna sida", "search.result.more.other": "# till p\u00e5 denna sida", "search.result.none": "Inga s\u00f6kresultat", "search.result.one": "1 s\u00f6kresultat", "search.result.other": "# s\u00f6kresultat", "search.result.placeholder": "Skriv s\u00f6kord", "search.result.term.missing": "Saknas", "select.version": "V\u00e4lj version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
