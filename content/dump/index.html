@@ -16,7 +16,7 @@
     
     
       
-        <title>Lektion 3 - Python Teknik 1</title>
+        <title>Dump - Python Teknik 1</title>
       
     
     
@@ -69,11 +69,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#lektion-3" class="md-skip">
-          Gå till innehållet
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -106,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Lektion 3
+              Dump
             
           </span>
         </div>
@@ -326,136 +321,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Innehållsförteckning
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#for-loop-kor-ett-bestamt-antal-varv" class="md-nav__link">
-    <span class="md-ellipsis">
-      for-loop (kör ett bestämt antal varv)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#range-start-stopp-steg" class="md-nav__link">
-    <span class="md-ellipsis">
-      range(): start, stopp, steg
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vardetabell-matte-y-x2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Värdetabell (matte): y = x^2
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tidssteg-tabell-teknikfysik-spinn-stracka-vid-konstant-hastighet" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tidssteg-tabell (teknik/fysik-spinn): sträcka vid konstant hastighet
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#if-inne-i-en-loop-markera-en-viktig-handelse" class="md-nav__link">
-    <span class="md-ellipsis">
-      if inne i en loop (markera en viktig händelse)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#while-loop-kor-sa-lange-ett-villkor-ar-sant" class="md-nav__link">
-    <span class="md-ellipsis">
-      while-loop (kör så länge ett villkor är sant)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vanliga-fel-felsokning" class="md-nav__link">
-    <span class="md-ellipsis">
-      Vanliga fel (felsökning)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Vanliga fel (felsökning)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-oandlig-loop-while" class="md-nav__link">
-    <span class="md-ellipsis">
-      1) Oändlig loop (while)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-off-by-one-range" class="md-nav__link">
-    <span class="md-ellipsis">
-      2) Off-by-one (range)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#inlamning-3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Inlämning 3
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Inlämning 3">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#uppgift-tidssteg-tabell-for-rorelse-loop-tabell-if" class="md-nav__link">
-    <span class="md-ellipsis">
-      Uppgift: Tidssteg-tabell för rörelse (loop + tabell + if)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#testkorning-exempel" class="md-nav__link">
-    <span class="md-ellipsis">
-      Testkörning (exempel)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -471,161 +336,26 @@
 
 
 
-<h1 id="lektion-3">Lektion 3<a class="headerlink" href="#lektion-3" title="Permanent link">&para;</a></h1>
-<p>Nu ska vi jobba med <strong>iteration</strong>, alltså att köra samma kod flera gånger. I Python gör man det med <strong>loopar</strong>.</p>
-<p>En vanlig ingenjörsgrej är att göra en <strong>tabell</strong>:
-- en rad per steg
-- ofta över tid (tidssteg), eller över olika x-värden (värdetabell)</p>
-<p>I den här lektionen går vi igenom:
-- <code>for</code> (bestämt antal varv)
-- <code>while</code> (kör så länge ett villkor är sant)
-- tabeller + ett exempel där vi använder <code>if</code> inne i en loop</p>
-<h2 id="for-loop-kor-ett-bestamt-antal-varv">for-loop (kör ett bestämt antal varv)<a class="headerlink" href="#for-loop-kor-ett-bestamt-antal-varv" title="Permanent link">&para;</a></h2>
-<p>En <code>for</code>-loop används när du vet <em>hur många gånger</em> du vill loopa.</p>
-<p>Exempel: skriv ut talen 1 till 5:</p>
-<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-</code></pre></div>
-<p><strong>Viktigt:</strong> <code>range(1, 6)</code> betyder 1,2,3,4,5 (slutet 6 är <strong>inte med</strong>).</p>
-<h2 id="range-start-stopp-steg">range(): start, stopp, steg<a class="headerlink" href="#range-start-stopp-steg" title="Permanent link">&para;</a></h2>
-<p><code>range()</code> kan skrivas på tre vanliga sätt:</p>
-<p>1) <code>range(stopp)</code>
-<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="c1"># Skriver: 0,1,2,3,4</span>
-</code></pre></div></p>
-<p>2) <code>range(start, stopp)</code>
-<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="c1"># Skriver: 3,4,5,6,7</span>
-</code></pre></div></p>
-<p>3) <code>range(start, stopp, steg)</code>
-<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="c1"># Skriver: 0,2,4,6,8,10</span>
-</code></pre></div></p>
-<h2 id="vardetabell-matte-y-x2">Värdetabell (matte): y = x^2<a class="headerlink" href="#vardetabell-matte-y-x2" title="Permanent link">&para;</a></h2>
-<p>En värdetabell är perfekt att göra med en loop.</p>
-<p>Vi skriver en rubrikrad först, och sedan en rad per x:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x  y&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-----&quot;</span><span class="p">)</span>
+  <h1>Dump</h1>
 
-<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
-    <span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-</code></pre></div>
-<p>Det blir inte “perfekt tabellformat”, men det blir en tydlig tabellidé: <strong>en rad per x</strong>.</p>
-<h2 id="tidssteg-tabell-teknikfysik-spinn-stracka-vid-konstant-hastighet">Tidssteg-tabell (teknik/fysik-spinn): sträcka vid konstant hastighet<a class="headerlink" href="#tidssteg-tabell-teknikfysik-spinn-stracka-vid-konstant-hastighet" title="Permanent link">&para;</a></h2>
-<p>Om en bil kör med konstant hastighet så gäller:
-- sträcka = hastighet * tid</p>
-<p>Vi kan skriva ut en tabell över tid, t.ex. varje sekund.</p>
-<div class="highlight"><pre><span></span><code><span class="n">hastighet_ms</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># m/s</span>
-<span class="n">total_tid</span> <span class="o">=</span> <span class="mi">10</span>     <span class="c1"># s</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;t (s)  sträcka (m)&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--------------------&quot;</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">total_tid</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
-    <span class="n">sträcka</span> <span class="o">=</span> <span class="n">hastighet_ms</span> <span class="o">*</span> <span class="n">t</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="s2">&quot;    &quot;</span><span class="p">,</span> <span class="n">sträcka</span><span class="p">)</span>
-</code></pre></div>
-<p>Notera <code>total_tid + 1</code> så att även sista sekunden kommer med.</p>
-<h2 id="if-inne-i-en-loop-markera-en-viktig-handelse">if inne i en loop (markera en viktig händelse)<a class="headerlink" href="#if-inne-i-en-loop-markera-en-viktig-handelse" title="Permanent link">&para;</a></h2>
-<p>Ofta vill man göra något speciellt när ett värde passerar en gräns.</p>
-<p>Exempel: skriv ut “PASSERAT 50 m!” när sträckan blir minst 50.</p>
-<div class="highlight"><pre><span></span><code><span class="n">hastighet_ms</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">total_tid</span> <span class="o">=</span> <span class="mi">10</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;t (s)  sträcka (m)  kommentar&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--------------------------------&quot;</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">total_tid</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
-    <span class="n">sträcka</span> <span class="o">=</span> <span class="n">hastighet_ms</span> <span class="o">*</span> <span class="n">t</span>
-
-    <span class="n">kommentar</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-    <span class="k">if</span> <span class="n">sträcka</span> <span class="o">&gt;=</span> <span class="mi">50</span><span class="p">:</span>
-        <span class="n">kommentar</span> <span class="o">=</span> <span class="s2">&quot;PASSERAT 50 m!&quot;</span>
-
-    <span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="s2">&quot;    &quot;</span><span class="p">,</span> <span class="n">sträcka</span><span class="p">,</span> <span class="s2">&quot;       &quot;</span><span class="p">,</span> <span class="n">kommentar</span><span class="p">)</span>
-</code></pre></div>
-<p>Här ser man en tydlig idé:
-- loopen gör “standardjobbet” varje varv
-- <code>if</code> gör “specialjobbet” ibland</p>
-<h2 id="while-loop-kor-sa-lange-ett-villkor-ar-sant">while-loop (kör så länge ett villkor är sant)<a class="headerlink" href="#while-loop-kor-sa-lange-ett-villkor-ar-sant" title="Permanent link">&para;</a></h2>
-<p>En <code>while</code>-loop används när du inte vet hur många varv det blir från början.</p>
-<p>Exempel: räkna ner från 5 till 1:</p>
-<div class="highlight"><pre><span></span><code><span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="k">while</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Start!&quot;</span><span class="p">)</span>
-</code></pre></div>
-<p><strong>Viktigt:</strong> i en <code>while</code> måste du nästan alltid uppdatera någon variabel (här <code>n</code>),
-annars kan det bli en oändlig loop.</p>
-<h2 id="vanliga-fel-felsokning">Vanliga fel (felsökning)<a class="headerlink" href="#vanliga-fel-felsokning" title="Permanent link">&para;</a></h2>
-<h3 id="1-oandlig-loop-while">1) Oändlig loop (while)<a class="headerlink" href="#1-oandlig-loop-while" title="Permanent link">&para;</a></h3>
-<p>Om du glömmer att ändra variabeln i loopen kan programmet fastna.</p>
-<div class="highlight"><pre><span></span><code><span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="k">while</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-    <span class="c1"># glömde: n = n - 1</span>
-</code></pre></div>
-<h3 id="2-off-by-one-range">2) Off-by-one (range)<a class="headerlink" href="#2-off-by-one-range" title="Permanent link">&para;</a></h3>
-<p><code>range(0, 10)</code> går till 9, inte 10.</p>
-<p>Om du vill ha med 10: <code>range(0, 11)</code>.</p>
-<h2 id="inlamning-3">Inlämning 3<a class="headerlink" href="#inlamning-3" title="Permanent link">&para;</a></h2>
-<p>Du ska skriva ett program och lämna in via classroom. Du ska lämna in en fil som heter <code>main.py</code>.
-Överst i filen ska du skriva följande info:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Namn: XXXX YYYY</span>
-<span class="c1"># Klass: NATE25</span>
-</code></pre></div>
-<h3 id="uppgift-tidssteg-tabell-for-rorelse-loop-tabell-if">Uppgift: Tidssteg-tabell för rörelse (loop + tabell + if)<a class="headerlink" href="#uppgift-tidssteg-tabell-for-rorelse-loop-tabell-if" title="Permanent link">&para;</a></h3>
-<p>Programmet ska:</p>
-<p>1) Fråga efter en hastighet i <strong>km/h</strong>
-2) Fråga efter en total tid i <strong>sekunder</strong>
-3) Göra rimlighetskontroll:
-   - hastighet ska vara mellan 0 och 300 km/h
-   - tid ska vara mellan 1 och 3600 s
-4) Om värdena är rimliga:
-   - räkna om hastigheten till m/s
-   - skriva ut en tabell med en rad per sekund:
-     - <code>t</code> (s)
-     - <code>sträcka</code> (m), avrundad till 1 decimal
-     - en kommentar-kolumn som skriver <code>"PASSERAT 100 m!"</code> från och med att sträckan är minst 100 m</p>
-<p><strong>Tips:</strong> använd en variabel <code>kommentar = ""</code> och sätt den med en <code>if</code>.</p>
-<p>Stilkrav:
-- Använd beskrivande variabelnamn (<code>hastighet_kmh</code>, <code>hastighet_ms</code>, <code>total_tid</code>, <code>sträcka</code>, …)
-- Ha minst en kommentar som delar upp programmet, t.ex. <code># Rimlighetskontroll</code></p>
-<h3 id="testkorning-exempel">Testkörning (exempel)<a class="headerlink" href="#testkorning-exempel" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>Ange hastighet i km/h: &gt; 36
-Ange total tid i sekunder: &gt; 12
-
-t (s)  sträcka (m)  kommentar
---------------------------------
-0      0.0
-1      10.0
-2      20.0
-3      30.0
-4      40.0
-5      50.0
-6      60.0
-7      70.0
-8      80.0
-9      90.0
-10     100.0       PASSERAT 100 m!
-11     110.0       PASSERAT 100 m!
-12     120.0       PASSERAT 100 m!
-</code></pre></div>
-<p>Orimliga värden:</p>
-<div class="highlight"><pre><span></span><code>Ange hastighet i km/h: &gt; 400
-Ange total tid i sekunder: &gt; 10
-Orimlig hastighet. Ange ett värde mellan 0 och 300 km/h.
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>Ange hastighet i km/h: &gt; 50
-Ange total tid i sekunder: &gt; 0
-Orimlig tid. Ange ett värde mellan 1 och 3600 sekunder.
-</code></pre></div>
+<p>TODO - tankar lektion 3</p>
+<p>Teori att ta upp (kanske): </p>
+<ul>
+<li>f-strängar JA</li>
+<li>nästlade repetitionssatser? NEJ</li>
+<li>ruta med tabell på fler utökade tilldelningsoperatorer dvs += osv KANSKE?</li>
+<li>break och continu, NEJ</li>
+</ul>
+<p>Exempel jag vill ha med?</p>
+<ul>
+<li>summera tal, typ summan av alla tal melan x och y JA</li>
+<li>Skriv ut en basic gångertabell med print(i * 5) exempelvis HA</li>
+<li>skriv ut som tabell kanske? Jag vet att det var en main-stay i planeringsstadiet iofs JA</li>
+<li>Fakultet vore kul, men kanske som en del i uppgiften? NEJ</li>
+<li>Köra-igen funktionalitet, alltså bara tekniken att wrappa programmet i en while JA</li>
+<li>Validering av användarinput - fråga igen tills det blir rätt NEJ</li>
+</ul>
+<hr />
 
 
 

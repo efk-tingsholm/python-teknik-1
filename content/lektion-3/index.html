@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lektion-3-ej-klar-arbete-pagar-sa-sakteliga" class="md-skip">
+        <a href="#lektion-3" class="md-skip">
           Gå till innehållet
         </a>
       
@@ -430,9 +430,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#snygg-tabell-med-f-string" class="md-nav__link">
+  <a href="#snygg-tabell-med-f-strang" class="md-nav__link">
     <span class="md-ellipsis">
-      Snygg tabell med f-string
+      Snygg tabell med f-sträng
     </span>
   </a>
   
@@ -599,9 +599,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#snygg-tabell-med-f-string" class="md-nav__link">
+  <a href="#snygg-tabell-med-f-strang" class="md-nav__link">
     <span class="md-ellipsis">
-      Snygg tabell med f-string
+      Snygg tabell med f-sträng
     </span>
   </a>
   
@@ -665,7 +665,7 @@
 
 
 
-<h1 id="lektion-3-ej-klar-arbete-pagar-sa-sakteliga">Lektion 3 - EJ KLAR, arbete pågår så sakteliga<a class="headerlink" href="#lektion-3-ej-klar-arbete-pagar-sa-sakteliga" title="Permanent link">&para;</a></h1>
+<h1 id="lektion-3">Lektion 3<a class="headerlink" href="#lektion-3" title="Permanent link">&para;</a></h1>
 <p>Program behöver också ofta kunna upprepa rader med kod, iteration. Detta sker genom att man i källkoden använder så kallade "loopar", eller iterationssatser, främst while-loop och for-loop.</p>
 <h2 id="while">While<a class="headerlink" href="#while" title="Permanent link">&para;</a></h2>
 <p>En while-loop upprepar en eller flera rader kod så länge som loopens villkor är sant. Att likna vid när en if-sats är sann/falsk. While-loopar är bra när man inte vet från början riktigt hur många gånger koden behöver upprepas.</p>
@@ -707,8 +707,49 @@ Loopen har avslutats
 <h3 id="utskrift-pa-en-rad">Utskrift på en rad<a class="headerlink" href="#utskrift-pa-en-rad" title="Permanent link">&para;</a></h3>
 <p>Följande exempel skriver ut alla jämna positiva heltal mindre än 10, på en rad, skiljda av mellanslag. </p>
 <p>För att få utskriften på en rad och med mellanslag mellan används argumentet <code>end</code> i funktionen <code>print()</code>.</p>
-<p>Exemplet använder också en förkortad version för att öka värdet på variabeln tal med 2. Användning av förkortad version är helt frivilligt.
-<div class="highlight"><pre><span></span><code><span class="n">tal</span> <span class="o">=</span> <span class="mi">2</span>
+<p>Exemplet använder också en förkortad version för att öka värdet på variabeln tal med 2. Användning av förkortad version är helt frivilligt.</p>
+<details class="info">
+<summary>Utökade tilldelningsoperatorer</summary>
+<p>Det är vanligt att utföra matematiska operationer på en variabel, t.ex. att addera 2 som i exemplet ovan, det är så vanligt att det finns förkortade versioner för fler tilldelningar än bara addition. Notera, helt frivilligt.</p>
+<table>
+<thead>
+<tr>
+<th>Lång version</th>
+<th>Kort version</th>
+<th>Betyder</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>x = x + 2</code></td>
+<td><code>x += 2</code></td>
+<td>lägg till</td>
+</tr>
+<tr>
+<td><code>x = x - 2</code></td>
+<td><code>x -= 2</code></td>
+<td>dra ifrån</td>
+</tr>
+<tr>
+<td><code>x = x * 2</code></td>
+<td><code>x *= 2</code></td>
+<td>multiplicera</td>
+</tr>
+<tr>
+<td><code>x = x / 2</code></td>
+<td><code>x /= 2</code></td>
+<td>dividera</td>
+</tr>
+</tbody>
+</table>
+<p>Exempel:</p>
+<div class="highlight"><pre><span></span><code><span class="n">tal</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">tal</span> <span class="o">+=</span> <span class="mi">3</span>   <span class="c1"># samma som tal = tal + 3</span>
+<span class="n">tal</span> <span class="o">*=</span> <span class="mi">2</span>   <span class="c1"># samma som tal = tal * 2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tal</span><span class="p">)</span> <span class="c1"># 26</span>
+</code></pre></div>
+</details>
+<p><div class="highlight"><pre><span></span><code><span class="n">tal</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="k">while</span> <span class="n">tal</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">tal</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
     <span class="n">tal</span> <span class="o">+=</span> <span class="mi">2</span>  <span class="c1"># Förkortad version av: tal = tal + 2</span>
@@ -807,8 +848,8 @@ Ger följande utskrift, nu har jag ju överdrivit, men det blev ju inte något v
 7 * 8 = 56
 8 * 8 = 64
 </code></pre></div></p>
-<h2 id="snygg-tabell-med-f-string">Snygg tabell med f-string<a class="headerlink" href="#snygg-tabell-med-f-string" title="Permanent link">&para;</a></h2>
-<p>I Python kan man formatera sina strängar med något som kallas f-sträng, eller formatsträngar. Med dem kan man bland annat uppnå snygga tabeller.</p>
+<h2 id="snygg-tabell-med-f-strang">Snygg tabell med f-sträng<a class="headerlink" href="#snygg-tabell-med-f-strang" title="Permanent link">&para;</a></h2>
+<p>I Python kan man formatera sina strängar med något som kallas f-sträng, eller formatsträngar (f-string på engelska). Med dem kan man bland annat uppnå snygga tabeller.</p>
 <p>Utöver det blir det också lättare att skriva text med variabler i, för f-strängar låter oss skriva variabler mitt i texten utan kommatecken, så det blir lättare att läsa vad det ska stå.</p>
 <p>Man gör en f-sträng genom att skriva bokstaven <code>f</code> framför textsträngen, alltså framför citattecknet. Sen kan man med hjälp av klammerparenteser <code>{...}</code> skriva in variabler var som helst inne i strängen.
 <div class="highlight"><pre><span></span><code><span class="n">tal</span> <span class="o">=</span> <span class="mi">8</span>
@@ -822,11 +863,11 @@ Ger följande utskrift, nu har jag ju överdrivit, men det blev ju inte något v
 <p>På motsvarande sätt finns <code>:&lt;5</code> för vänsterjustering, i en kolumn med bredden 5 här i exemplet, man kan ändra siffra till önskad bredd.</p>
 <p>Beväpnade med detta tar vi oss an åttans gångertabell igen:</p>
 <div class="highlight"><pre><span></span><code><span class="n">tal</span> <span class="o">=</span> <span class="mi">8</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tal Variabel Produkt&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tal   Variabel   Produkt&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;------------------------&quot;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">tal</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
     <span class="c1"># Nu skriver vi ut varje rad i tabellen med en f-sträng.</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">tal</span><span class="si">:</span><span class="s2">&lt;3</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">i</span><span class="si">:</span><span class="s2">^8</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">tal</span><span class="si">:</span><span class="s2">&gt;7</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">tal</span><span class="si">:</span><span class="s2">&lt;3</span><span class="si">}</span><span class="s2"> * </span><span class="si">{</span><span class="n">i</span><span class="si">:</span><span class="s2">^8</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">tal</span><span class="si">:</span><span class="s2">&gt;7</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div>
 <blockquote>
 <p>En bra startpunkt för kolumnbredd är att räkna antalet bokstäver i rubrik-ordet.</p>
@@ -874,7 +915,7 @@ Ger följande utskrift, nu har jag ju överdrivit, men det blev ju inte något v
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Summan är </span><span class="si">{</span><span class="n">summa</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
 </code></pre></div></p>
-<p>Man är såklart inte begränsad till summa och varje tal, man skulle också kunna tänka sig att bestämma produkten av vart trejde tal mellan 5 och 15.
+<p>Man är såklart inte begränsad till summa och varje tal, man skulle också kunna tänka sig att bestämma produkten av vart trejde tal mellan 5 och 20.
 <div class="highlight"><pre><span></span><code><span class="n">produkt</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span><span class="mi">3</span><span class="p">):</span>  <span class="c1"># 5*8*11*14*17, börjar på 5, ökar med 3 varje varv.</span>
     <span class="n">produkt</span> <span class="o">=</span> <span class="n">produkt</span> <span class="o">*</span> <span class="n">i</span>
@@ -925,24 +966,6 @@ Ger följande utskrift, nu har jag ju överdrivit, men det blev ju inte något v
 Så även om användaren nu skriver "J", så kommer versalen att göras om till gemenen (liten bokstav) "j" och allt är frid och fröjd.</p>
 </details>
 <hr />
-<p>TODO - tankar</p>
-<p>Teori att ta upp (kanske): </p>
-<ul>
-<li>f-strängar</li>
-<li>nästlade repetitionssatser? </li>
-<li>ruta med tabell på fler utökade tilldelningsoperatorer dvs += osv </li>
-<li>break och continu, </li>
-</ul>
-<p>Exempel jag vill ha med?</p>
-<ul>
-<li>summera tal, typ summan av alla tal melan x och y</li>
-<li>Skriv ut en basic gångertabell med print(i * 5) exempelvis</li>
-<li>skriv ut som tabell kanske? Jag vet att det var en main-stay i planeringsstadiet iofs</li>
-<li>Fakultet vore kul, men kanske som en del i uppgiften?</li>
-<li>Köra-igen funktionalitet, alltså bara tekniken att wrappa programmet i en while</li>
-<li>Validering av användarinput - fråga igen tills det blir rätt</li>
-</ul>
-<hr />
 <h2 id="inlamning-3">Inlämning 3<a class="headerlink" href="#inlamning-3" title="Permanent link">&para;</a></h2>
 <p>Du ska skriva ett program och lämna in via classroom. Du ska lämna in en fil som heter <code>förnamn_efternamn_inl_3.py</code>. Överst i filen ska du skriva följande info:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Namn: XXXX YYYY</span>
@@ -954,7 +977,7 @@ Så även om användaren nu skriver "J", så kommer versalen att göras om till 
 <li>Ta in ett startvärde från användaren, den nivå batteriet ska ha från början, mellan 50 och 100 %. Om värdet är otillåtet kan programmet stänga ner bara, det behöver INTE fråga igen.</li>
 <li>Programmet ska sedan simulera att robotens batteri sjunker med 7 %-enheter per timme, och skriva ut batterinivån för varje timme, som en tabell. (Tänk: en loop där varje varv motsvarar en timme.)</li>
 <li>När batterinivån är 25 % eller lägre går roboten in i batterisparläge, och drar mindre energi, 3 %-enheter per timme. Så länge som roboten är i sparläge ska ett meddelande skrivas ut i tabellen, se testkörning.</li>
-<li>När robotens batteri når noll ska tabellen avslutas med ett meddelande om att robten stängs av. Notera att robotens batterinivå inte ska bli negativ, utan stanna på noll.</li>
+<li>När robotens batteri når noll ska tabellen avslutas med ett meddelande om att roboten stängs av. Notera att robotens batterinivå inte ska bli negativ, utan stanna på noll.</li>
 </ul>
 <h3 id="testkorning">Testkörning<a class="headerlink" href="#testkorning" title="Permanent link">&para;</a></h3>
 <p>Såhär skulle det kunna se ut när man kör programmet, dina formuleringar kan självklart vara annorlunda.</p>
