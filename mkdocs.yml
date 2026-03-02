@@ -46,6 +46,7 @@ nav:
   - Lektion 1: content/lektion-1.md
   - Lektion 2: content/lektion-2.md
   - Lektion 3: content/lektion-3.md
+  - Lektion 4: content/lektion-4.md
 
 
 markdown_extensions:
