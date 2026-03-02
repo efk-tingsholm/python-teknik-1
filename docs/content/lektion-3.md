@@ -1,4 +1,4 @@
-# Lektion 3 - EJ KLAR, arbete pågår så sakteliga
+# Lektion 3
 
 Program behöver också ofta kunna upprepa rader med kod, iteration. Detta sker genom att man i källkoden använder så kallade "loopar", eller iterationssatser, främst while-loop och for-loop.
 
@@ -57,6 +57,28 @@ Följande exempel skriver ut alla jämna positiva heltal mindre än 10, på en r
 För att få utskriften på en rad och med mellanslag mellan används argumentet `end` i funktionen `print()`.
 
 Exemplet använder också en förkortad version för att öka värdet på variabeln tal med 2. Användning av förkortad version är helt frivilligt.
+
+??? info "Utökade tilldelningsoperatorer"
+    Det är vanligt att utföra matematiska operationer på en variabel, t.ex. att addera 2 som i exemplet ovan, det är så vanligt att det finns förkortade versioner för fler tilldelningar än bara addition. Notera, helt frivilligt.
+
+    | Lång version | Kort version | Betyder |
+    |---|---|---|
+    | `x = x + 2` | `x += 2` | lägg till |
+    | `x = x - 2` | `x -= 2` | dra ifrån |
+    | `x = x * 2` | `x *= 2` | multiplicera |
+    | `x = x / 2` | `x /= 2` | dividera |
+
+
+    Exempel:
+
+    ```py
+    tal = 10
+    tal += 3   # samma som tal = tal + 3
+    tal *= 2   # samma som tal = tal * 2
+    print(tal) # 26
+    ```
+
+
 ```py
 tal = 2
 while tal < 10:
@@ -180,8 +202,8 @@ Variabel Tal Produkt
 8 * 8 = 64
 ```
 
-## Snygg tabell med f-string
-I Python kan man formatera sina strängar med något som kallas f-sträng, eller formatsträngar. Med dem kan man bland annat uppnå snygga tabeller.
+## Snygg tabell med f-sträng
+I Python kan man formatera sina strängar med något som kallas f-sträng, eller formatsträngar (f-string på engelska). Med dem kan man bland annat uppnå snygga tabeller.
 
 Utöver det blir det också lättare att skriva text med variabler i, för f-strängar låter oss skriva variabler mitt i texten utan kommatecken, så det blir lättare att läsa vad det ska stå.
 
@@ -202,11 +224,11 @@ Beväpnade med detta tar vi oss an åttans gångertabell igen:
 
 ```py
 tal = 8
-print("Tal Variabel Produkt")
+print("Tal   Variabel   Produkt")
 print("------------------------")
 for i in range(1, tal + 1):
     # Nu skriver vi ut varje rad i tabellen med en f-sträng.
-    print(f"{tal:<3} {i:^8} {i * tal:>7}")
+    print(f"{tal:<3} * {i:^8} = {i * tal:>7}")
 ```
 > En bra startpunkt för kolumnbredd är att räkna antalet bokstäver i rubrik-ordet.
 
@@ -257,7 +279,7 @@ for i in range(start, stopp + 1):
 print(f"Summan är {summa}!")
 ```
 
-Man är såklart inte begränsad till summa och varje tal, man skulle också kunna tänka sig att bestämma produkten av vart trejde tal mellan 5 och 15.
+Man är såklart inte begränsad till summa och varje tal, man skulle också kunna tänka sig att bestämma produkten av vart trejde tal mellan 5 och 20.
 ```py
 produkt = 1
 for i in range(5, 20,3):  # 5*8*11*14*17, börjar på 5, ökar med 3 varje varv.
@@ -316,25 +338,7 @@ print("Programmet avslutas.")
 
 ---
 
-TODO - tankar
 
-Teori att ta upp (kanske): 
-
-- f-strängar
-- nästlade repetitionssatser? 
-- ruta med tabell på fler utökade tilldelningsoperatorer dvs += osv 
-- break och continu, 
-
-Exempel jag vill ha med?
-
-- summera tal, typ summan av alla tal melan x och y
-- Skriv ut en basic gångertabell med print(i * 5) exempelvis
-- skriv ut som tabell kanske? Jag vet att det var en main-stay i planeringsstadiet iofs
-- Fakultet vore kul, men kanske som en del i uppgiften?
-- Köra-igen funktionalitet, alltså bara tekniken att wrappa programmet i en while
-- Validering av användarinput - fråga igen tills det blir rätt
-
----
 
 ## Inlämning 3
 
@@ -352,7 +356,7 @@ Ditt program ska:
 - Ta in ett startvärde från användaren, den nivå batteriet ska ha från början, mellan 50 och 100 %. Om värdet är otillåtet kan programmet stänga ner bara, det behöver INTE fråga igen.
 - Programmet ska sedan simulera att robotens batteri sjunker med 7 %-enheter per timme, och skriva ut batterinivån för varje timme, som en tabell. (Tänk: en loop där varje varv motsvarar en timme.)
 - När batterinivån är 25 % eller lägre går roboten in i batterisparläge, och drar mindre energi, 3 %-enheter per timme. Så länge som roboten är i sparläge ska ett meddelande skrivas ut i tabellen, se testkörning.
-- När robotens batteri når noll ska tabellen avslutas med ett meddelande om att robten stängs av. Notera att robotens batterinivå inte ska bli negativ, utan stanna på noll.
+- När robotens batteri når noll ska tabellen avslutas med ett meddelande om att roboten stängs av. Notera att robotens batterinivå inte ska bli negativ, utan stanna på noll.
 
 ### Testkörning
 Såhär skulle det kunna se ut när man kör programmet, dina formuleringar kan självklart vara annorlunda.
