@@ -46,7 +46,7 @@
       
     
     
-      <link rel="stylesheet" href="../../styles/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/print.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -459,13 +459,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#inlamning-3" class="md-nav__link">
+  <a href="#inlamning-3-version-2" class="md-nav__link">
     <span class="md-ellipsis">
-      Inlämning 3
+      Inlämning 3 - version 2
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Inlämning 3">
+    <nav class="md-nav" aria-label="Inlämning 3 - version 2">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -650,13 +650,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#inlamning-3" class="md-nav__link">
+  <a href="#inlamning-3-version-2" class="md-nav__link">
     <span class="md-ellipsis">
-      Inlämning 3
+      Inlämning 3 - version 2
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Inlämning 3">
+    <nav class="md-nav" aria-label="Inlämning 3 - version 2">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -990,7 +990,16 @@ Ger följande utskrift, nu har jag ju överdrivit, men det blev ju inte något v
 Så även om användaren nu skriver "J", så kommer versalen att göras om till gemenen (liten bokstav) "j" och allt är frid och fröjd.</p>
 </details>
 <hr />
-<h2 id="inlamning-3">Inlämning 3<a class="headerlink" href="#inlamning-3" title="Permanent link">&para;</a></h2>
+<h2 id="inlamning-3-version-2">Inlämning 3 - version 2<a class="headerlink" href="#inlamning-3-version-2" title="Permanent link">&para;</a></h2>
+<details class="info">
+<summary>Version 2</summary>
+<p>Jag har förenklat uppgiften något: </p>
+<ul>
+<li>Roboten har nu samma energiåtgång hela tiden  </li>
+<li>Det skrivs ut meddelanden i varje rad, så man får en tydligare idé på hur man gör</li>
+</ul>
+<p>Om du vill göra förra versionen går det bra också, den finns <a href="../inl-3-old/">här</a>.</p>
+</details>
 <p>Du ska skriva ett program och lämna in via classroom. Du ska lämna in en fil som heter <code>förnamn_efternamn_inl_3.py</code>. Överst i filen ska du skriva följande info:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Namn: XXXX YYYY</span>
 <span class="c1"># Klass: NATE25</span>
@@ -998,10 +1007,20 @@ Så även om användaren nu skriver "J", så kommer versalen att göras om till 
 <p>Programmet handlar om att simulera en robot och robotens batteri över tid.</p>
 <p>Ditt program ska:</p>
 <ul>
-<li>Ta in ett startvärde från användaren, den nivå batteriet ska ha från början, mellan 50 och 100 %. Om värdet är otillåtet kan programmet stänga ner bara, det behöver INTE fråga igen.</li>
-<li>Programmet ska sedan simulera att robotens batteri sjunker med 7 %-enheter per timme, och skriva ut batterinivån för varje timme, som en tabell. (Tänk: en loop där varje varv motsvarar en timme.)</li>
-<li>När batterinivån är 25 % eller lägre går roboten in i batterisparläge, och drar mindre energi, 3 %-enheter per timme. Så länge som roboten är i sparläge ska ett meddelande skrivas ut i tabellen, se testkörning.</li>
-<li>När robotens batteri når noll ska tabellen avslutas med ett meddelande om att roboten stängs av. Notera att robotens batterinivå inte ska bli negativ, utan stanna på noll.</li>
+<li>
+<p>Ta in ett startvärde från användaren, den nivå batteriet ska ha från början, mellan 50 och 100 %. Om värdet är otillåtet kan programmet stänga ner bara, det behöver INTE fråga igen.</p>
+</li>
+<li>
+<p>Programmet ska sedan simulera att robotens batteri sjunker med 7 %-enheter per timme, och skriva ut batterinivån för varje timme, som en tabell. </p>
+<p><em>Tänk: en loop där varje varv motsvarar en timme.</em></p>
+</li>
+<li>
+<p>När batterinivån är 25 % eller lägre anser roboten att den har lågt batteri, meddelandet ska skrivas ut i tabellen, se testkörning.</p>
+</li>
+<li>
+<p>När robotens batteri når noll ska tabellen avslutas med ett meddelande om att roboten stängs av. Notera att robotens batterinivå inte ska bli negativ, utan stanna på noll. </p>
+<p><em>Eller ja, användaren ska inte se att den är negativ i alla fall.</em></p>
+</li>
 </ul>
 <h3 id="testkorning">Testkörning<a class="headerlink" href="#testkorning" title="Permanent link">&para;</a></h3>
 <p>Såhär skulle det kunna se ut när man kör programmet, dina formuleringar kan självklart vara annorlunda.</p>
@@ -1011,25 +1030,21 @@ Orimligt värde. Ange ett heltal mellan 50 och 100.
 <div class="highlight"><pre><span></span><code>Ange startnivå på batteriet (50-100): 89
 
 Tid(h)  Energi(%)  Meddelande
------------------------------
-0       89
-1       82
-2       75
-3       68
-4       61
-5       54
-6       47
-7       40
-8       33
-9       26
-10      19         SPARLÄGE (3 %/h)
-11      16         SPARLÄGE (3 %/h)
-12      13         SPARLÄGE (3 %/h)
-13      10         SPARLÄGE (3 %/h)
-14      7          SPARLÄGE (3 %/h)
-15      4          SPARLÄGE (3 %/h)
-16      1          SPARLÄGE (3 %/h)
-17      0          Batteriet är slut. Robot stänger av...
+--------------------------------
+0       89         Normal drift
+1       82         Normal drift
+2       75         Normal drift
+3       68         Normal drift
+4       61         Normal drift
+5       54         Normal drift
+6       47         Normal drift
+7       40         Normal drift
+8       33         Normal drift
+9       26         Normal drift
+10      19         Lågt batteri
+11      12         Lågt batteri
+12      5          Lågt batteri
+13      0          Batteriet är slut. Avstää...
 </code></pre></div></p>
 <details class="info">
 <summary>Bonus: time.sleep()</summary>

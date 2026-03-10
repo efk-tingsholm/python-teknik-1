@@ -1,0 +1,44 @@
+
+
+/* Gäller bara vid utskrift (Ctrl+P / Spara som PDF) */
+@media print {
+
+  /* 1) Sidbryt före H2 (men inte före första H2 på sidan) */
+  /* nyare standard */
+  /* fallback för äldre motorer */     
+  /* .md-typeset h2:not(:first-of-type) {
+    break-before: page;   
+    page-break-before: always;  
+  } */
+
+  
+  /* 2) Sidbryt före horisontella linjer (--- i Markdown => <hr>) */
+  .md-typeset hr {
+    break-after: page;
+    page-break-after: always;
+  }
+
+  /* 3) Håll ihop kodblock, tabeller och admonitions så de inte delas mitt i */
+  .md-typeset pre,
+  .md-typeset .highlight,
+  .md-typeset table,
+  .md-typeset .admonition,
+  .md-typeset details {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* 4) (Valfritt) Minimera “ensamma rader” över sidbrytningar */
+  .md-typeset p,
+  .md-typeset li {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* 5) (Valfritt) Lite tightare marginaler i utskrift */
+  @page {
+    margin: 16mm;
+  }
+}
+
+
