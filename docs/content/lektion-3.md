@@ -373,6 +373,15 @@ Ditt program ska:
 
     *Eller ja, användaren ska inte se att den är negativ i alla fall.*
 
+Stilkrav:
+
+- Använd beskrivande variabelnamn, t.ex. fart_kmh och fart_ms.
+- Ha minst en beskrivande kommentar som delar upp/förtydligar vad som händer, exempelvis # Rimlighetskontroll
+    ```
+    # Rimlighetskontroll
+    all din kod som gör rimlighetskontroll
+    ```
+
 ### Testkörning
 Såhär skulle det kunna se ut när man kör programmet, dina formuleringar kan självklart vara annorlunda.
 
