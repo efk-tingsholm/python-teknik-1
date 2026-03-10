@@ -340,7 +340,15 @@ print("Programmet avslutas.")
 
 
 
-## Inlämning 3
+## Inlämning 3 - version 2
+
+??? info "Version 2"
+    Jag har förenklat uppgiften något: 
+
+    - Roboten har nu samma energiåtgång hela tiden  
+    - Det skrivs ut meddelanden i varje rad, så man får en tydligare idé på hur man gör
+    
+    Om du vill göra förra versionen går det bra också, den finns [här](inl-3-old.md).
 
 Du ska skriva ett program och lämna in via classroom. Du ska lämna in en fil som heter `förnamn_efternamn_inl_3.py`. Överst i filen ska du skriva följande info:
 
@@ -354,9 +362,16 @@ Programmet handlar om att simulera en robot och robotens batteri över tid.
 Ditt program ska:
 
 - Ta in ett startvärde från användaren, den nivå batteriet ska ha från början, mellan 50 och 100 %. Om värdet är otillåtet kan programmet stänga ner bara, det behöver INTE fråga igen.
-- Programmet ska sedan simulera att robotens batteri sjunker med 7 %-enheter per timme, och skriva ut batterinivån för varje timme, som en tabell. (Tänk: en loop där varje varv motsvarar en timme.)
-- När batterinivån är 25 % eller lägre går roboten in i batterisparläge, och drar mindre energi, 3 %-enheter per timme. Så länge som roboten är i sparläge ska ett meddelande skrivas ut i tabellen, se testkörning.
-- När robotens batteri når noll ska tabellen avslutas med ett meddelande om att roboten stängs av. Notera att robotens batterinivå inte ska bli negativ, utan stanna på noll.
+
+- Programmet ska sedan simulera att robotens batteri sjunker med 7 %-enheter per timme, och skriva ut batterinivån för varje timme, som en tabell. 
+
+    *Tänk: en loop där varje varv motsvarar en timme.*
+
+- När batterinivån är 25 % eller lägre anser roboten att den har lågt batteri, meddelandet ska skrivas ut i tabellen, se testkörning.
+
+- När robotens batteri når noll ska tabellen avslutas med ett meddelande om att roboten stängs av. Notera att robotens batterinivå inte ska bli negativ, utan stanna på noll. 
+
+    *Eller ja, användaren ska inte se att den är negativ i alla fall.*
 
 ### Testkörning
 Såhär skulle det kunna se ut när man kör programmet, dina formuleringar kan självklart vara annorlunda.
@@ -369,25 +384,21 @@ Orimligt värde. Ange ett heltal mellan 50 och 100.
 Ange startnivå på batteriet (50-100): 89
 
 Tid(h)  Energi(%)  Meddelande
------------------------------
-0       89
-1       82
-2       75
-3       68
-4       61
-5       54
-6       47
-7       40
-8       33
-9       26
-10      19         SPARLÄGE (3 %/h)
-11      16         SPARLÄGE (3 %/h)
-12      13         SPARLÄGE (3 %/h)
-13      10         SPARLÄGE (3 %/h)
-14      7          SPARLÄGE (3 %/h)
-15      4          SPARLÄGE (3 %/h)
-16      1          SPARLÄGE (3 %/h)
-17      0          Batteriet är slut. Robot stänger av...
+--------------------------------
+0       89         Normal drift
+1       82         Normal drift
+2       75         Normal drift
+3       68         Normal drift
+4       61         Normal drift
+5       54         Normal drift
+6       47         Normal drift
+7       40         Normal drift
+8       33         Normal drift
+9       26         Normal drift
+10      19         Lågt batteri
+11      12         Lågt batteri
+12      5          Lågt batteri
+13      0          Batteriet är slut. Avstää...
 ```
 
 

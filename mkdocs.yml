@@ -91,7 +91,8 @@ markdown_extensions:
 
 
 extra_css:
-  - styles/extra.css
+  - stylesheets/print.css
+
 
 extra_javascript:
   - javascripts/mathjax.js
