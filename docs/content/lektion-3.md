@@ -97,7 +97,7 @@ Exemplet ovan ger följande utskrift:
     
     Testa att skriva något annat. Kanske en helt tom sträng `""`. Eller varför inte `"glassbåt"`.
 
----
+
 
 
 ## For
