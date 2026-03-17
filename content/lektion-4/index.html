@@ -429,11 +429,59 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#loopa-och-forandra-varden" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loopa och förändra värden
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Loopa och förändra värden">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filtrera-fram-en-ny-lista" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtrera fram en ny lista
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#lagga-till-i-lista" class="md-nav__link">
     <span class="md-ellipsis">
       Lägga till i lista
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Lägga till i lista">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#append" class="md-nav__link">
+    <span class="md-ellipsis">
+      append()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#append-med-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      append() med loop
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -571,11 +619,59 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#loopa-och-forandra-varden" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loopa och förändra värden
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Loopa och förändra värden">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filtrera-fram-en-ny-lista" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtrera fram en ny lista
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#lagga-till-i-lista" class="md-nav__link">
     <span class="md-ellipsis">
       Lägga till i lista
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Lägga till i lista">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#append" class="md-nav__link">
+    <span class="md-ellipsis">
+      append()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#append-med-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      append() med loop
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -756,8 +852,73 @@ Ger utskriften:
 <blockquote>
 <p>Ger utskriften: skruv mutter bult brickor</p>
 </blockquote>
+<h3 id="loopa-och-forandra-varden">Loopa och förändra värden<a class="headerlink" href="#loopa-och-forandra-varden" title="Permanent link">&para;</a></h3>
+<p>Ibland vill man inte bara läsa en lista, utan också skapa en ny lista där värdena är justerade.</p>
+<h4 id="filtrera-fram-en-ny-lista">Filtrera fram en ny lista<a class="headerlink" href="#filtrera-fram-en-ny-lista" title="Permanent link">&para;</a></h4>
+<p>Ett säkert sätt att "ta bort" värden är att skapa en ny lista och bara lägga in de värden som är godkända.
+I det här exemplet filtreras negativa tal bort, genom att loopa genom listan och spara alla positiva tal i en lista.</p>
+<p>tal = [5, -2, 12, -7, 0, 9, -1]
+giltiga_tal = []</p>
+<p>for t in tal:
+    if t &gt;= 0:
+        giltiga_tal.append(t)</p>
+<p>print("Original:", tal)
+print("Giltiga (utan negativa):", giltiga_tal)</p>
 <h3 id="lagga-till-i-lista">Lägga till i lista<a class="headerlink" href="#lagga-till-i-lista" title="Permanent link">&para;</a></h3>
-<p>Både enkel append() och loopa och appenda</p>
+<p>För att lägga till ett nytt element i en lista använder man metoden append().
+Det betyder att värdet läggs sist i listan.</p>
+<h4 id="append">append()<a class="headerlink" href="#append" title="Permanent link">&para;</a></h4>
+<p>Följande exempel lägger till talen 40 och sen 5 på en befintlig lista, dessa hamnar sist, i den ordning de läggs till.
+<div class="highlight"><pre><span></span><code><span class="n">tal</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>
+
+<span class="n">tal</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>
+<span class="n">tal</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">tal</span><span class="p">)</span>  <span class="c1"># [10, 20, 30, 40, 5]</span>
+</code></pre></div></p>
+<details class="info">
+<summary>Bonus: ta bort element (remove och pop)</summary>
+<p>Det finns två vanliga sätt att ta bort element ur en lista:</p>
+<ul>
+<li><code>remove(x)</code> tar bort <strong>första förekomsten</strong> av värdet <code>x</code>.</li>
+<li><code>pop(index)</code> tar bort elementet på ett visst <strong>index</strong>.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">tal</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">40</span><span class="p">]</span>
+
+<span class="n">tal</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>   <span class="c1"># tar bort första 20</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tal</span><span class="p">)</span>       <span class="c1"># [10, 30, 20, 40]</span>
+
+<span class="n">tal</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>       <span class="c1"># tar bort elementet på index 1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tal</span><span class="p">)</span>       <span class="c1"># [10, 20, 40]</span>
+</code></pre></div>
+</details>
+<h4 id="append-med-loop">append() med loop<a class="headerlink" href="#append-med-loop" title="Permanent link">&para;</a></h4>
+<p>Ofta vill man fylla en lista genom att läsa in flera värden. Här skriver användaren in olika heltal tills denne skriver "klar".</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># En tom lista som kan fyllas på.</span>
+<span class="n">tal_lista</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># En bool som ska styra loopen.</span>
+<span class="n">fortsatt</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="c1"># Upprepa sålänge som variabeln fortsatt är sann.</span>
+<span class="k">while</span> <span class="n">fortsatt</span><span class="p">:</span>
+    <span class="c1"># Ta in en ny text från användaren, en gång varje varv</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Skriv in ett heltal (eller klar): &quot;</span><span class="p">)</span>
+
+    <span class="c1"># OM texten som skrivs in är &quot;klar&quot; så avbryts loopen,</span>
+    <span class="c1"># annars lägger vi till ordet på listan</span>
+    <span class="k">if</span> <span class="n">text</span> <span class="o">==</span> <span class="s2">&quot;klar&quot;</span><span class="p">:</span>
+        <span class="n">fortsatt</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># int() används för att konvertera till heltal</span>
+        <span class="n">tal_lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">text</span><span class="p">))</span> 
+
+<span class="c1"># Efter loopen är färdig, skriv ut hela listan med ord</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Du matade in:&quot;</span><span class="p">,</span> <span class="n">tal_lista</span><span class="p">)</span>
+</code></pre></div>
+<blockquote>
+<p>Om du vill kontrollera hur många tal användaren matade in kan du använda len(ord_lista).</p>
+</blockquote>
 <h2 id="ovrigt">Övrigt<a class="headerlink" href="#ovrigt" title="Permanent link">&para;</a></h2>
 <p>Vill vi ens ta upp skillnad funktione/metod i python, kanske som inforuta?</p>
 <p>Kanske inte ta exempel på alla nedanstående, men eller jo kanske, iaf ha med som resurser, dock inte kräva dem i inlämning kanske.</p>
