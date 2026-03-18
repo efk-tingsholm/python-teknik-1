@@ -908,7 +908,7 @@ Det betyder att värdet läggs sist i listan.</p>
     <span class="n">text</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Skriv in ett heltal (eller klar): &quot;</span><span class="p">)</span>
 
     <span class="c1"># OM texten som skrivs in är &quot;klar&quot; så avbryts loopen,</span>
-    <span class="c1"># annars lägger vi till ordet på listan</span>
+    <span class="c1"># annars lägger vi till talet på listan</span>
     <span class="k">if</span> <span class="n">text</span> <span class="o">==</span> <span class="s2">&quot;klar&quot;</span><span class="p">:</span>
         <span class="n">fortsatt</span> <span class="o">=</span> <span class="kc">False</span>
     <span class="k">else</span><span class="p">:</span>
@@ -919,7 +919,7 @@ Det betyder att värdet läggs sist i listan.</p>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Du matade in:&quot;</span><span class="p">,</span> <span class="n">tal_lista</span><span class="p">)</span>
 </code></pre></div>
 <blockquote>
-<p>Om du vill kontrollera hur många tal användaren matade in kan du använda len(ord_lista).</p>
+<p>Om du vill kontrollera hur många tal användaren matade in kan du använda len(tal_lista).</p>
 </blockquote>
 <h2 id="loopa-och-forandra-varden">Loopa och förändra värden<a class="headerlink" href="#loopa-och-forandra-varden" title="Permanent link">&para;</a></h2>
 <h3 id="filtrera-fram-en-ny-lista">Filtrera fram en ny lista<a class="headerlink" href="#filtrera-fram-en-ny-lista" title="Permanent link">&para;</a></h3>
@@ -929,7 +929,7 @@ Det betyder att värdet läggs sist i listan.</p>
 
 <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tal</span><span class="p">:</span>
     <span class="c1"># OM talet t just detta varvet i loopen är positivt, lägg till.</span>
-    <span class="k">if</span> <span class="n">t</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">t</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
         <span class="n">positiva_tal</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Original:&quot;</span><span class="p">,</span> <span class="n">tal</span><span class="p">)</span>
@@ -1035,11 +1035,8 @@ Därför är det bra att först kontrollera om <code>len(tal) == 0</code>.</p>
 </ul>
 <p>Stilkrav:</p>
 <ul>
-<li>Använd beskrivande variabelnamn, t.ex. fart_kmh och fart_ms.</li>
-<li>Ha minst en beskrivande kommentar som delar upp/förtydligar vad som händer, exempelvis # Rimlighetskontroll
-    <div class="highlight"><pre><span></span><code># Rimlighetskontroll
-all din kod som gör rimlighetskontroll
-</code></pre></div></li>
+<li>Använd beskrivande variabelnamn, t.ex. <code>temperaturer</code>, <code>antal_ogiltiga</code>, <code>minsta</code>, <code>storsta</code>.</li>
+<li>Ha minst en beskrivande kommentar som delar upp/förtydligar vad som händer, exempelvis # Rimlighetskontroll</li>
 </ul>
 <h3 id="testkorning">Testkörning<a class="headerlink" href="#testkorning" title="Permanent link">&para;</a></h3>
 <p>Såhär skulle det kunna se ut när man kör programmet, dina formuleringar kan självklart vara annorlunda.</p>
