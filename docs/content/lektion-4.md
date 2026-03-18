@@ -165,7 +165,7 @@ while fortsatt:
     text = input("Skriv in ett heltal (eller klar): ")
 
     # OM texten som skrivs in är "klar" så avbryts loopen,
-    # annars lägger vi till ordet på listan
+    # annars lägger vi till talet på listan
     if text == "klar":
         fortsatt = False
     else:
@@ -176,7 +176,7 @@ while fortsatt:
 print("Du matade in:", tal_lista)
 
 ```
-> Om du vill kontrollera hur många tal användaren matade in kan du använda len(ord_lista).
+> Om du vill kontrollera hur många tal användaren matade in kan du använda len(tal_lista).
 
 
 
@@ -193,7 +193,7 @@ positiva_tal = []
 
 for t in tal:
     # OM talet t just detta varvet i loopen är positivt, lägg till.
-    if t >= 0:
+    if t > 0:
         positiva_tal.append(t)
 
 print("Original:", tal)
@@ -313,12 +313,9 @@ Ditt program ska:
 
 Stilkrav:
 
-- Använd beskrivande variabelnamn, t.ex. fart_kmh och fart_ms.
+- Använd beskrivande variabelnamn, t.ex. `temperaturer`, `antal_ogiltiga`, `minsta`, `storsta`.
 - Ha minst en beskrivande kommentar som delar upp/förtydligar vad som händer, exempelvis # Rimlighetskontroll
-    ```
-    # Rimlighetskontroll
-    all din kod som gör rimlighetskontroll
-    ```
+
 
 ### Testkörning
 Såhär skulle det kunna se ut när man kör programmet, dina formuleringar kan självklart vara annorlunda.

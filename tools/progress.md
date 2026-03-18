@@ -4,7 +4,7 @@
 - [x] Lektion 1: Setup + print/input + float/round + Exit Ticket 1
 - [x] Lektion 2: if/elif/else + rimlighet + felmeddelanden + Exit Ticket 2
 - [x] Lektion 3: Loopar + tabeller (tidssteg)
-- [ ] Lektion 4: Listor + enkel statistik
+- [x] Lektion 4: Listor + enkel statistik
 - [ ] Lektion 5: Funktioner (anti-copy-paste)
 - [ ] Lektion 6: Simulering temperatur + matplotlib
 - [ ] Lektion 7: pygame-skelett + styrda ändringar
@@ -13,20 +13,22 @@
 ## Beslut (standarder)
 - Verktyg: VS Code + Python + Python extension (Microsoft).
 - Körning: Run-knappen som standard. Terminal som backup/felsökning.
-- Inlämningar: 1 fil per exit ticket (ingen zip).
-- Filnamn: `main.py` för exit tickets.
+- Inlämningar: 1 fil per inlämning (ingen zip).
+- Filnamn:
+  - Inlämning 1: `main.py`
+  - Inlämning 2+ : `förnamn_efternamn_inl_X.py`
 - Header i varje fil:
   - `# Namn: ...`
   - `# Klass: ...`
 - Kodstil: beskrivande variabelnamn + `snake_case`.
-- Exit tickets bedöms F/E (kravbaserat). Komplettering ok men alla ska göras.
+- Bedömning: kravbaserat (komplettering ok, alla inlämningar ska göras).
 - Admonitions: används för tips/felsökning/överkurstexter (MkDocs Material).
+  - Bonus/överkurser läggs gärna i hopfällbara rutor (`???`).
 
 ## MkDocs-format
 - En lektion = en sida (`lektion-1.md`, `lektion-2.md`, ...).
 - CTA-stil: rubrik → kort text → kodexempel.
 - Efter setup-fasen: minimalt med screenshots.
-- Exempelkörning: markera användarinput med `>`.
 
 ## Lektion 1 (detaljer)
 ### Innehåll
@@ -100,7 +102,47 @@
 - Output: tabell med kolumner (Timme/Varv, Energi, Meddelande) + testkörningsexempel.
 - Stilkrav: beskrivande variabelnamn, header med namn/klass, 1 fil.
 
+## Lektion 4 (detaljer)
+### Innehåll
+- Introduktion listor: varför listor (mätserie/logg = många värden).
+- Skapa listor:
+  - tom lista `[]`
+  - lista med startvärden (exempel med heltal/ord)
+  - varning/info: Python kan blanda datatyper i listor, men vi siktar på en typ (t.ex. bara tal).
+- Index:
+  - första elementet `lista[0]`, tredje `lista[2]`
+  - negativa index: `lista[-1]`, `lista[-2]`
+  - varning: `IndexError` om index är utanför listans range.
+- Loopa genom listor:
+  - med `range()` + `len()` (när man behöver index)
+  - utan `range()` (loop direkt över elementen)
+  - repetition: utskrift på en rad med `print(..., end=" ")`.
+- Lägga till i lista:
+  - `append()` som standard
+  - bygga lista med inmatning i `while` styrd av bool (utan `break`).
+- Bonus/admonitions:
+  - ta bort element: `remove(x)` (första förekomsten) och `pop(index)` (RemoveAt-liknande).
+- Loopa och förändra:
+  - filtrera till ny lista (t.ex. ta bort negativa tal genom att bara spara giltiga)
+  - ändra i befintlig lista med index (t.ex. öka alla tal < 10 med 5).
+- Enkel statistik på listor:
+  - `len`, `min`, `max`, `sum`, medelvärde `sum/len`, spann `max-min`
+  - info/tips: kontrollera tom lista innan `min/max` och medelvärde.
+- Medlemskap:
+  - kontrollera om värde finns i lista med `in` (ord- och tal-exempel).
+
+### Inlämning 4 (instruktion)
+- Tema: dygnsmedeltemperaturer (Göteborg) med outliers/felvärden.
+- Input: heltal en temperatur i taget tills användaren skriver `klar`.
+- Rimlighetskontroll: giltigt intervall (t.ex. -25 till 35, inklusive).
+  - ogiltiga värden ignoreras och räknas (räknare för outliers).
+- Output:
+  - antal giltiga, min, max, medelvärde, spann
+  - samt antal ogiltiga/outliers
+  - om listan är tom: felmeddelande och avslut.
+- Stilkrav: beskrivande variabelnamn + minst en strukturkommentar.
+
 ## Att göra (nästa steg)
-- [ ] Starta skelett för `lektion-4.md` (listor + enkel statistik).
-- [ ] Bestäm Exit Ticket 4 (lista + t.ex. medelvärde/min/max + rimlighetskontroll light).
+- [ ] Starta skelett för `lektion-5.md` (funktioner: anti-copy-paste).
+- [ ] Bestäm Exit Ticket 5 (funktioner + återanvändning, ev. testdata med random som verktyg/bonus).
 - [ ] Uppdatera `tools/ai-prompts.md` vid behov (t.ex. prompt för “gör 5 extra övningar på samma tema”).
