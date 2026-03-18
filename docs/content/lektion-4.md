@@ -1,17 +1,4 @@
-# Lektion 4 - Arbete pågår, ej klar!
-
-TODO
-
-Faktiska exempelsaker
-
-- Loopa genom lista
-- Loopa genom och göra nåt, typ om elementet är < 10 så öka det med 20
-- Skriva in tal från användaren direkt på lista
-- split() för text?
-- kolla om element x finns i lista? "XXX" in min_lista?
-
-
-## Listor
+# Lektion 4
 
 När man mäter något lite mer seriöst, temperatur, längd, ljudnivå eller annat, så får man oftast inte bara ett mätvärde, utan man tar många mätvärden över tid, man får en mätserie.
 
@@ -19,7 +6,7 @@ Oavsett om det handlar om mätserier eller namnlistor så behövs därmed ett s�
 
 En lista är en samling av värden, dessa värden kallas element. Varje element har en position i listan, denna position kallas index. Det går att ändra, ta bort och lägga till element i listan.
 
-### Skapa lista
+## Skapa lista
 En lista kan skapas genom att listelementen skrivs innanför hakparenteser, åtskilda av kommatecken.
 
 ```py
@@ -38,7 +25,7 @@ print(ord_lista) # ["hej", "på", "dig"]
 
     Men det kan vara bra att alltid jobba med samma datatyp i listan, t.ex. inte ha text i en lista för tal. Annars kan vanliga beräkningar som `sum(values)`, `min(values)` och `max(values)` ge fel om listan innehåller både tal och text.
 
-### Index
+## Index
 Varje element har en position i listan, som kan beskrivas med ett heltal, positionen kallas index. Det första elementet i listan har index 0, det andra elementet har index 1, och så vidare.
 
 
@@ -92,10 +79,10 @@ print("Tredje från slutet:", tal[-3])         # 9
     Exempel: om listan har 7 element så är sista giltiga index `6`.
     Om du försöker läsa `tal[7]` så kraschar programmet.
 
-### Loopa genom lista
+## Loopa genom lista
 För att skriva ut eller komma åt alla element i en lista ett i taget kan man använda en loop, med fördel en for-loop.
 
-#### med range()
+### med range()
 Här behöver man också använda funktionen `len()` för att få ut hur många element det finns på listan.
 
 ```py
@@ -117,7 +104,7 @@ Ger utskriften:
 3
 ```
 
-#### utan range()
+### utan range()
 Här används listans variabelnamn direkt i for-loopen. Sparar rader, men helt frivilligt.
 ```py
 ord_lista = ["skruv", "mutter", "bult", "brickor"]
@@ -129,30 +116,11 @@ for ord in ord_lista:
 > Ger utskriften: skruv mutter bult brickor
 
 
-### Loopa och förändra värden
-Ibland vill man inte bara läsa en lista, utan också skapa en ny lista där värdena är justerade.
-
-#### Filtrera fram en ny lista 
-Ett säkert sätt att "ta bort" värden är att skapa en ny lista och bara lägga in de värden som är godkända.
-I det här exemplet filtreras negativa tal bort, genom att loopa genom listan och spara alla positiva tal i en lista.
-
-tal = [5, -2, 12, -7, 0, 9, -1]
-giltiga_tal = []
-
-for t in tal:
-    if t >= 0:
-        giltiga_tal.append(t)
-
-print("Original:", tal)
-print("Giltiga (utan negativa):", giltiga_tal)
-
-
-
-### Lägga till i lista
+## Lägga till i lista
 För att lägga till ett nytt element i en lista använder man metoden append().
 Det betyder att värdet läggs sist i listan.
 
-#### append()
+### append()
 Följande exempel lägger till talen 40 och sen 5 på en befintlig lista, dessa hamnar sist, i den ordning de läggs till.
 ```py
 tal = [10, 20, 30]
@@ -181,7 +149,7 @@ print(tal)  # [10, 20, 30, 40, 5]
     ```
 
 
-#### append() med loop
+### append() med loop
 Ofta vill man fylla en lista genom att läsa in flera värden. Här skriver användaren in olika heltal tills denne skriver "klar".
 
 ```py
@@ -212,29 +180,176 @@ print("Du matade in:", tal_lista)
 
 
 
+
+
+## Loopa och förändra värden
+
+### Filtrera fram en ny lista 
+Ibland behöver man bara vissa värden ur sin datamängd, av någon anledning. Exempelvis så kanske bara de positiva talen är relevanta, ett sätt att lösa det problemet är att göra en ny lista och lägga bara de positiva talen på den. Det görs här genom att loopa genom listan, och med en if-sats undersöka för varje tal om det är positivt, och i så fall lägga till det på den nya listan.
+
+```py
+tal = [5, -2, 12, -7, 0, 9, -1]
+positiva_tal = []
+
+for t in tal:
+    # OM talet t just detta varvet i loopen är positivt, lägg till.
+    if t >= 0:
+        positiva_tal.append(t)
+
+print("Original:", tal)
+print("Positiva tal:", positiva_tal)
+```
+
+### Ändra värden i listan
+Om du vill ändra några av värdena i listan behöver man använda index i sin loop. I det här exemplet ökas alla tal som är mindre än 10 med 5.
+
+```py
+tal = [4, 12, 7, 19, 3, 25, 9]
+
+antal = len(tal)
+for i in range(antal):
+    # Om talet i listan med index i är mindre än 10, addera 5.
+    if tal[i] < 10:
+        tal[i] = tal[i] + 5
+
+print("Ändrad lista:", tal)
+```
+
+
+## Finns X i listan?
+För att kolla om ett värde finns i en lista kan du använda ordet `in`.
+Det ger True (sant) eller False (falskt).
+
+```py
+delar = ["skruv", "mutter", "bult", "bricka"]
+
+print("bult" in delar)     # True
+print("spik" in delar)     # False
+
+sokord = input("Skriv ett ord att söka efter: ")
+if sokord in delar:
+    print("Ja, det finns i listan!")
+else:
+    print("Nej, det finns inte i listan.")
+
+```
+
+
+## Statistik med listor
+När du har en lista med tal kan du snabbt räkna ut enkel statistik med inbyggda funktioner.
+
+```py
+tal = [4, 12, 7, 19, 3, 25, 9]
+
+antal = len(tal)
+minsta = min(tal)
+storsta = max(tal)
+summa = sum(tal)
+medel = summa / antal
+spann = storsta - minsta
+
+print("Tal:", tal)
+print("Antal:", antal)
+print("Min:", minsta)
+print("Max:", storsta)
+print("Summa:", summa)
+print("Medelvärde:", medel)
+print("Spann (max-min):", spann)
+```
+
+!!! info "Tips: tom lista"
+    Om listan är tom (inga tal) kan `min()`, `max()` och medelvärde ge fel.
+    Därför är det bra att först kontrollera om `len(tal) == 0`.
+
 ## Övrigt
-Vill vi ens ta upp skillnad funktione/metod i python, kanske som inforuta?
+Bra att veta att dessa finns, ej supernödvändigt just nu.
 
-Kanske inte ta exempel på alla nedanstående, men eller jo kanske, iaf ha med som resurser, dock inte kräva dem i inlämning kanske.
+- count(x) = räknar hur många gånger x finns i listan
+- index(x) = ger index för första förekomsten av x
+- clear()  = tömmer listan helt
 
-Hmm, dessa två punktlistor kanske borde vara sammanfattning, och introducera de flesta av dem via exempel istället?
+```py
+tal = [10, 20, 30, 20, 40]
 
-### Funktioner
+print(tal.count(20))   # 2
+print(tal.index(30))   # 2
 
-- len()
-- sum()
-- max()
-- min()
+tal.clear()
+print(tal)             # []
+```
 
-### Metoder
+## Inlämning 4
 
-- reverse()
-- sort()
-- clear()
-- count(a)
-- index(a)
-- append(a)
-- remove(a)
+Du ska skriva ett program och lämna in via classroom. Du ska lämna in en fil som heter `förnamn_efternamn_inl_4.py`. Överst i filen ska du skriva följande info:
+
+Överst i filen ska du skriva följande info:
+```py
+# Namn: XXXX YYYY
+# Klass: NATE25
+```
+
+Programmet handlar om statistik för temperaturmätningar. Du har gjort flera temperaturmätningar på dygnsmedeltemperaturen i Göteborg. I en mätserie kan det ibland finnas outliers, t.ex. mätfel eller orimliga avläsningar. I det här scenariot antas giltiga temperaturer ligga i intervallet -25 °C till 35 °C.
+
+
+Ditt program ska: 
+
+- Låta användaren skriva in temperaturer som heltal, en temperatur i taget, ända tills användaren skriver "klar".
+
+- Om en inmatad temperatur är inom det giltiga intervallet -25 till 35 (inklusive) ska den läggas till i en lista. 
+
+- Om en inmatad temperatur är ogiltig, t.ex. -30, så ska den inte läggas på listan, men programmet ska räkna antalet ogiltiga temperaturer som matats in.
+
+- När inmatningen är färdig så ska programmet skriva ut lite statistik om listan:
+    - Antal temperaturer
+    - Högsta temperatur
+    - Lägsta temperatur
+    - Medelvärdet av temperaturerna på listan
+    - Temperaturspann (skillnaden högsta - lägsta)
+    - ÄVEN: Antal ogiltiga temperaturer (som man räknat i punkt 3 ovan)
+
+- Om listan är tom ska det skrivas ut ett felmeddelande, t.ex. "Inga giltiga temperaturer i datan."
 
 
 
+Stilkrav:
+
+- Använd beskrivande variabelnamn, t.ex. fart_kmh och fart_ms.
+- Ha minst en beskrivande kommentar som delar upp/förtydligar vad som händer, exempelvis # Rimlighetskontroll
+    ```
+    # Rimlighetskontroll
+    all din kod som gör rimlighetskontroll
+    ```
+
+### Testkörning
+Såhär skulle det kunna se ut när man kör programmet, dina formuleringar kan självklart vara annorlunda.
+
+```
+Ange temperatur (heltal). Avsluta med klar: -50
+Ange temperatur (heltal). Avsluta med klar: -5
+Ange temperatur (heltal). Avsluta med klar: 3
+Ange temperatur (heltal). Avsluta med klar: 4
+Ange temperatur (heltal). Avsluta med klar: 8
+Ange temperatur (heltal). Avsluta med klar: 13
+Ange temperatur (heltal). Avsluta med klar: 27
+Ange temperatur (heltal). Avsluta med klar: 40
+Ange temperatur (heltal). Avsluta med klar: klar
+
+==================================
+Statistik för giltiga temperaturer
+==================================
+Antal temperaturer: 6
+Högsta temperatur: 27
+Lägsta temperatur: -5
+Medelvärde: 8.33
+Temperaturspann: 32
+Antal ogiltiga temperaturer: 2
+```
+
+```
+Ange temperatur (heltal). Avsluta med klar: 99
+Ange temperatur (heltal). Avsluta med klar: 99
+Ange temperatur (heltal). Avsluta med klar: 99
+Ange temperatur (heltal). Avsluta med klar: klar
+
+Inga giltiga temperaturer i datan.
+```
