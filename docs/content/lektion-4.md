@@ -79,6 +79,9 @@ print("Tredje från slutet:", tal[-3])         # 9
     Exempel: om listan har 7 element så är sista giltiga index `6`.
     Om du försöker läsa `tal[7]` så kraschar programmet.
 
+
+---
+
 ## Loopa genom lista
 För att skriva ut eller komma åt alla element i en lista ett i taget kan man använda en loop, med fördel en for-loop.
 
@@ -234,6 +237,7 @@ else:
 
 ```
 
+---
 
 ## Statistik med listor
 När du har en lista med tal kan du snabbt räkna ut enkel statistik med inbyggda funktioner.
