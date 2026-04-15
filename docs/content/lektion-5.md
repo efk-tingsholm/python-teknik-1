@@ -32,7 +32,7 @@ Kommer främst fokusera på linjediagram, går även att rita andra diagram.
 ### Ditt första diagram
 För att matplotlib ska fungera behöver man i sin källkod importera biblioteket, via import.
 
-Matplotlib ritar ut data från listor, i nedanstående exempel listan matvarden.
+Matplotlib ritar ut data från listor.
 ```py
 import matplotlib.pyplot as plt # Denna rad behövs!
 
