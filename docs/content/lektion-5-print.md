@@ -41,9 +41,9 @@ lista = [12, 15, 14, 18, 16]
 plt.plot(lista)
 plt.show()
 ```
-![](images/plt-basic.png)
 
 
+---
 
 ### Titel och etiketter
 Man kan lägga till titel och axelrubriker via title, xlabel och ylabel, notera att `plt.show()` ska vara sist.
@@ -54,7 +54,7 @@ plt.xlabel("Dag")
 plt.ylabel("Temperatur (°C)")
 plt.show()
 ```
-![](images/plt-titles.png)
+
 
 
 
@@ -69,7 +69,7 @@ plt.show()
 ```
 > Det går också att skicka in en lista med text, t.ex. mån, tis, ons...
 
-![](images/plt-x-axis.png)
+
 
 
 
@@ -84,7 +84,7 @@ plt.plot(dagar, inne)
 plt.plot(dagar, ute)
 plt.show()
 ```
-![](images/plt-double-y.png)
+
 
 
 
@@ -100,7 +100,8 @@ plt.plot(dagar, ute, label="Ute")
 plt.legend()
 plt.show()
 ```
-![](images/plt-labels.png)
+
+---
 
 ## Färger och stil
 Det finns många färg och stilalternativ för att ändra utseendet på grafen.
@@ -111,7 +112,7 @@ temperaturer = [12, 34, 15, 16]
 plt.plot(temperaturer, color="hotpink", marker="o")
 plt.show()
 ```
-![](images/plt-color.png)
+
 
 Matplotlib stödjer massa färger på flera olika sätt, man kan scrolla ner lite här och se en lista.
 https://matplotlib.org/stable/gallery/color/named_colors.html
@@ -157,7 +158,7 @@ plt.ylabel("Temperatur (°C)")
 plt.grid(axis="x", color="gray", linestyle="--", linewidth=1)
 plt.show()
 ```
-![](images/plt-grid.png)
+
 
 ## Skriv text i diagrammet
 Man kan skriva text i diagramytan med hjälp av funktionen text(), enligt: `plt.text(x, y, "din text")`.
@@ -170,7 +171,7 @@ plt.plot(temperaturer, marker="o")
 plt.text(2, 20, "Hejsan", color="blue")
 plt.show()
 ```
-![](images/plt-text.png)
+
 
 
 ??? tip "Peka ut en punkt med `annotate()`"
@@ -253,7 +254,7 @@ print(lista)
 ```
 > Ger utskrift av en lista med 10 st slumpade tal mellan 10 och 30.
 
-### Random bonus
+
 
 ## Inlämning 5
 Du ska skriva ett program och lämna in via classroom. Du ska lämna in en fil som heter `förnamn_efternamn_inl_5.py`. Överst i filen ska du skriva följande info:
